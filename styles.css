@@ -22,10 +22,11 @@ body {
 /* Hero section styles */
 .hero {
   /* This sets the background image for the hero section */
-  background-image: url('https://via.placeholder.com/1200x600?text=Hero+Image'); /* Replace with your image */
+  background-image: url('./img/herophoto.png'); /* Updated to use your hero photo */
   background-size: cover;      /* Make the image cover the whole section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;/* Don't repeat the image */
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
   min-height: 70vh;            /* Make hero section tall */
   display: flex;               /* Use flexbox to center content */
   align-items: center;         /* Vertically center */
@@ -35,33 +36,44 @@ body {
 /* Content sits above the background image */
 .hero-content {
   text-align: center;
-  background: rgba(255,255,255,0.08); /* Subtle background for readability */
+  /* Make the overlay a bit darker for better contrast */
+  background: rgba(0,0,0,0.25); /* Slightly darker overlay */
   border-radius: 10px;
   padding: 30px 16px;
-  max-width: 700px;
+  max-width: 600px;             /* Reduce max-width for better readability */
   width: 100%;
+  margin: 0 auto;               /* Center the content */
 }
 
 /* Headline styles */
 .hero h1 {
   color: #FFC907;                 /* Bright yellow */
-  font-size: 4em;                 /* Large font */
+  /* Use clamp() to make font size responsive */
+  font-size: clamp(2em, 6vw, 4em); /* Responsive font size */
   font-weight: bold;
   text-transform: uppercase;       /* All caps */
   margin-bottom: 18px;
-  line-height: 1.1;
+  line-height: 1.4;               /* Increased line height for better spacing */
+  /* Add a soft black shadow for better contrast */
   text-shadow:
+    0 2px 8px #00000099,          /* Soft black shadow for contrast */
     2px 2px 0 #1A1A1A,            /* Main shadow for depth */
     4px 4px 8px #00336655;        /* Soft blue shadow for glow */
   letter-spacing: 2px;
   display: inline-block;
+  max-width: 90vw;                /* Prevent text from stretching too wide */
+  /* Add padding for small screens (overridden by media query if needed) */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Subtext styles */
 .hero-subtext {
   color: #fff;              /* White text */
-  font-size: 1.1em;
+  /* Use clamp() for responsive font size */
+  font-size: clamp(1em, 2.5vw, 1.1em);
   margin-bottom: 32px;
+  padding: 0 10px;          /* Add padding for readability on small screens */
 }
 
 /* Call-to-action button styles */
@@ -86,10 +98,17 @@ body {
 
 /* Story Section Styles */
 .story {
-  background-color: #77A8BC; /* Dusty Blue */
-  color: #1A1A1A; /* Charcoal Black */
-  text-align: center;
-  padding: 30px 20px;
+  min-height: 100vh;                /* Fill the whole viewport */
+  background-color: #77A8BC;        /* Dusty Blue from brand palette */
+  /* Optional: add a background image by uncommenting below */
+  /* background-image: url('./img/story-bg.jpg'); */
+  /* background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; */
+  color: #1A1A1A;                   /* Charcoal Black text */
+  text-align: center;                /* Center the text */
+  padding: 60px 20px;                /* Consistent vertical padding */
 }
 
 .story img {
@@ -102,10 +121,17 @@ body {
 
 /* Call-to-Action Section Styles */
 .cta {
-  background-color: #7BAE7F; /* Sage Green */
+  min-height: 100vh;                /* Fill the whole viewport */
+  background-color: #7BAE7F;        /* Sage Green from brand palette */
+  /* Optional: add a background image by uncommenting below */
+  /* background-image: url('./img/cta-bg.jpg'); */
+  /* background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed; */
   color: #1A1A1A;
   text-align: center;
-  padding: 30px 20px;
+  padding: 60px 20px;               /* Consistent vertical padding */
 }
 
 .cta-button {
@@ -134,24 +160,44 @@ body {
   .hero {
     min-height: 50vh;
     padding: 20px 0;
+    flex-direction: column;      /* Stack content vertically */
   }
   .hero h1 {
-    font-size: 1.5em;
+    /* Shrink heading text on small screens using clamp */
+    font-size: clamp(1.2em, 5vw, 1.5em);
+    padding-left: 4px;
+    padding-right: 4px;
+    max-width: 98vw;
   }
   .hero-content {
-    padding: 16px 4px;
+    padding: 16px 8px;         /* More padding on small screens */
     max-width: 95%;
+    display: flex;
+    flex-direction: column;    /* Stack all content vertically */
+    align-items: center;       /* Center content horizontally */
   }
   .hero-button {
-    width: 100%;
+    width: 100%;               /* Button fills width for easy tapping */
     padding: 12px 0;
     font-size: 1em;
+    margin: 16px 0 0 0;        /* Space above button */
+    display: block;
+    text-align: center;
+  }
+  .hero-subtext {
+    font-size: clamp(0.95em, 2.5vw, 1em); /* Responsive scaling for subtext */
+    padding: 0 8px;
   }
 
   /* Make images fit the screen */
   .story img, .hero img {
     max-width: 100%;
     height: auto;
+  }
+
+  .story, .cta {
+    min-height: 60vh; /* Shorter on small screens */
+    padding: 30px 8px; /* Adjust padding for mobile */
   }
 }
 
