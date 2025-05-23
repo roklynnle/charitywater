@@ -67,23 +67,21 @@ body {
 /* Headline styles */
 .hero h1 {
   color: #FFC907;                 /* Bright yellow */
-  /* Use clamp() to make font size responsive */
   font-size: clamp(2em, 6vw, 4em); /* Responsive font size */
   font-weight: bold;
   text-transform: uppercase;       /* All caps */
-  margin-bottom: 18px;
-  line-height: 1.4;               /* Increased line height for better spacing */
-  /* Add a soft black shadow for better contrast */
+  margin-bottom: 8px;              /* Less space below heading */
+  line-height: 1.1;                /* Less space between lines */
   text-shadow:
-    0 2px 8px #00000099,          /* Soft black shadow for contrast */
-    2px 2px 0 #1A1A1A,            /* Main shadow for depth */
-    4px 4px 8px #00336655;        /* Soft blue shadow for glow */
-  letter-spacing: 2px;
+    0 2px 8px #00000099,
+    2px 2px 0 #1A1A1A,
+    4px 4px 8px #00336655;
+  letter-spacing: 1px;             /* Less space between letters */
   display: inline-block;
-  max-width: 90vw;                /* Prevent text from stretching too wide */
-  /* Add padding for small screens (overridden by media query if needed) */
+  max-width: 90vw;
   padding-left: 10px;
   padding-right: 10px;
+  text-align: center;              /* Keep text centered */
 }
 
 /* Style for paragraphs inside the hero section */
@@ -100,6 +98,7 @@ body {
   color: #fff;                                 /* White text */
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Keep font consistent */
   font-size: clamp(1rem, 3vw, 1.5rem);         /* Responsive font size */
+  margin-top: 0;                               /* Remove extra space above subtext */
   margin-bottom: 32px;
   max-width: 600px;                            /* Limit width for readability */
   margin-left: auto;                           /* Center horizontally */
