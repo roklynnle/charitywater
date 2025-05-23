@@ -1,250 +1,164 @@
 /* 
-  charity: water Brand Styles
-  Color Palette:
-    Light Gray: #CBCDD1
-    Sage Green: #7BAE7F
-    Dusty Blue: #77A8BC
-    Navy Blue: #003366
-    Charcoal Black: #1A1A1A
-    Yellow (Accent): #FFC907
-
-  Font:
-    Proxima Nova (use a similar system font as fallback)
+  Beginner-friendly CSS for charity: water landing page
+  Comments are included to help you understand each part.
 */
 
-/* Use Proxima Nova font, fallback to sans-serif */
-body {
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+/* Set up some color and font variables for easy changes */
+:root {
+  --yellow: #ffc907;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --blue: #77a8bc;
+  --font: Arial, Helvetica, sans-serif; /* Use simple, common fonts */
+}
+
+/* Remove default margin and padding from the page */
+body, html {
   margin: 0;
   padding: 0;
+  font-family: var(--font);
+  background-color: var(--white);
 }
 
-/* Hero section styles for full width and height */
+/* Hero section fills the whole screen with a background image */
 .hero {
-  /* Use the correct background image */
-  background-image: url('./img/glasses-hero.jpg');
-  background-size: cover;         /* Stretch image to cover the area */
-  background-position: center;    /* Center the image */
-  background-repeat: no-repeat;   /* Do not repeat the image */
-  width: 100vw;                   /* 100% of the viewport width */
-  height: 100vh;                  /* 100% of the viewport height */
-  min-height: 100vh;              /* Ensure it fills the viewport */
-  margin: 0;                      /* Remove default margin */
-  display: flex;                  /* Center content */
-  align-items: center;            /* Vertically center */
-  justify-content: center;        /* Horizontally center */
-  /* No border-radius for a sharp edge-to-edge look */
-  border-radius: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-image: url('./img/glasses-hero.jpg'); /* Background photo */
+  background-size: cover; /* Stretch image to cover area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat image */
+  display: flex; /* Use flex to center content */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  position: relative; /* Needed for overlay */
+  border-radius: 0; /* No rounded corners */
 }
 
-/* Style for the hero logo image */
-.hero-logo {
-  width: 120px;         /* Makes the logo a good size */
-  display: block;       /* Makes sure it sits on its own line */
-  margin: 0 auto 20px;  /* Centers the logo and adds space below */
-  opacity: 0.9;         /* Makes the logo more visible */
+/* Overlay makes text easier to read on the background */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 32px 16px; /* Space inside overlay */
+  width: 90%; /* Not full width, so there's some space at the sides */
+  max-width: 500px; /* Limit width for readability */
+  text-align: center; /* Center all text */
+  border-radius: 0; /* No rounded corners */
 }
 
-/* Decorative hero background logo (lightly transparent and blended) */
-.hero-bg-logo {
-  width: 120px;                  /* Make it smaller than the main logo */
-  max-width: 40vw;
-  display: block;
-  margin: 0 auto 1rem auto;      /* Center and add space below */
-  opacity: 0.25;                 /* Make it lightly transparent */
-  /* Optional: add a soft blur or blend for extra effect */
-  filter: blur(0.5px);
-  /* Place behind the main logo and heading if needed */
-}
-
-/* Logo styles: keeps the logo small and centered above the heading */
+/* Logo image at the top of the hero section */
 .logo {
-  max-width: 160px;           /* Limit logo width */
-  display: block;             /* Make logo a block element */
-  margin: 0 auto 1.5rem;      /* Center horizontally and add space below */
+  max-width: 120px; /* Keep logo a good size */
+  display: block; /* Make logo a block element */
+  margin: 0 auto 24px auto; /* Center and add space below */
 }
 
-/* Content sits above the background image */
-.hero-content {
-  text-align: center;
-  /* Make the overlay a bit darker for better contrast */
-  background: rgba(0,0,0,0.25); /* Slightly darker overlay */
-  border-radius: 0;             /* No rounded corners */
-  padding: 30px 16px;
-  max-width: 600px;             /* Reduce max-width for better readability */
-  width: 100%;
-  margin: 0 auto;               /* Center the content */
-}
-
-/* Headline styles */
+/* Main headline styles */
 .hero h1 {
-  color: #FFC907;                 /* Bright yellow */
-  font-size: clamp(2em, 6vw, 4em); /* Responsive font size */
-  font-weight: bold;
-  text-transform: uppercase;       /* All caps */
-  margin-bottom: 8px;              /* Less space below heading */
-  line-height: 1.1;                /* Less space between lines */
-  text-shadow:
-    0 2px 8px #00000099,
-    2px 2px 0 #1A1A1A,
-    4px 4px 8px #00336655;
-  letter-spacing: 1px;             /* Less space between letters */
-  display: inline-block;
-  max-width: 90vw;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: center;              /* Keep text centered */
+  color: var(--yellow); /* Yellow text */
+  font-size: 2em; /* Large text */
+  font-weight: bold; /* Bold text */
+  margin: 0 0 16px 0; /* Space below headline */
+  line-height: 1.2; /* Space between lines */
+  text-transform: uppercase; /* All caps */
 }
 
-/* Style for paragraphs inside the hero section */
-.hero p {
-  font-size: clamp(1rem, 2vw, 1.5rem);   /* Responsive font size */
-  max-width: 600px;                      /* Limit width for readability */
-  margin: 1rem auto 0;                   /* Space above and center horizontally */
-  padding: 0 1rem;                       /* Padding for small screens */
-  color: white;                          /* White text for contrast */
-}
-
-/* Subtext styles */
+/* Subheader styles */
 .hero-subtext {
-  color: #fff;                                 /* White text */
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Keep font consistent */
-  font-size: clamp(1rem, 3vw, 1.5rem);         /* Responsive font size */
-  margin-top: 0;                               /* Remove extra space above subtext */
-  margin-bottom: 32px;
-  max-width: 600px;                            /* Limit width for readability */
-  margin-left: auto;                           /* Center horizontally */
-  margin-right: auto;
-  padding-left: 16px;                          /* Padding for small screens */
-  padding-right: 16px;
+  color: var(--white); /* White text */
+  font-size: 1.1em; /* Slightly larger text */
+  margin-bottom: 24px; /* Space below subtext */
 }
 
 /* Call-to-action button styles */
-.hero-button {
-  display: inline-block;
-  background-color: #FFC907; /* Yellow */
-  color: #1A1A1A;            /* Black text */
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 15px 32px;
-  border: 3px solid #1A1A1A; /* Thick black border */
-  border-radius: 32px;       /* Pill shape */
-  text-decoration: none;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #fff;    /* White on hover */
-}
-
-/* Story Section Styles */
-.story {
-  min-height: 100vh;                /* Fill the whole viewport */
-  background-color: #77A8BC;        /* Dusty Blue from brand palette */
-  /* Optional: add a background image by uncommenting below */
-  /* background-image: url('./img/story-bg.jpg'); */
-  /* background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-attachment: fixed; */
-  color: #1A1A1A;                   /* Charcoal Black text */
-  text-align: center;                /* Center the text */
-  padding: 60px 20px;                /* Consistent vertical padding */
-}
-
-.story img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-
-/* Call-to-Action Section Styles */
-.cta {
-  min-height: 100vh;                /* Fill the whole viewport */
-  background-color: #7BAE7F;        /* Sage Green from brand palette */
-  /* Optional: add a background image by uncommenting below */
-  /* background-image: url('./img/cta-bg.jpg'); */
-  /* background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-attachment: fixed; */
-  color: #1A1A1A;
-  text-align: center;
-  padding: 60px 20px;               /* Consistent vertical padding */
-}
-
 .cta-button {
   display: inline-block;
-  background-color: #FFC907; /* Yellow accent */
-  color: #003366; /* Navy Blue text */
+  background-color: var(--yellow); /* Yellow background */
+  color: var(--black); /* Black text */
   font-weight: bold;
   text-transform: uppercase;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 4px;
+  padding: 12px 28px;
+  border-radius: 24px; /* Rounded button */
   text-decoration: none;
-  margin-top: 15px;
   font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
+  border: 2px solid var(--black); /* Black border */
+  transition: background 0.2s;
 }
 
 .cta-button:hover {
-  background-color: #CBCDD1; /* Light Gray on hover */
+  background-color: #e6b800; /* Slightly darker yellow on hover */
+  cursor: pointer;
 }
 
-/* Responsive design for mobile devices */
+/* Story section styles */
+.story {
+  background-color: var(--blue); /* Light blue background */
+  padding: 40px 16px;
+  text-align: center;
+}
+
+.story h2 {
+  color: var(--black);
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.story p {
+  color: var(--white);
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+  font-size: 1.1em;
+}
+
+.story-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* Call-to-Action section styles */
+.cta-section {
+  background-color: var(--yellow);
+  color: var(--black);
+  text-align: center;
+  padding: 40px 16px;
+}
+
+.cta-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+
+/* Responsive design for small screens */
 @media (max-width: 600px) {
-  /* Make hero section shorter and text smaller on small screens */
   .hero {
-    min-height: 50vh;
+    height: auto; /* Let height grow with content */
+    min-height: 60vh; /* Minimum height for small screens */
     padding: 20px 0;
-    flex-direction: column;      /* Stack content vertically */
+  }
+  .hero-overlay {
+    padding: 16px 4px;
+    max-width: 98%;
+  }
+  .logo {
+    max-width: 80px;
+    margin-bottom: 16px;
   }
   .hero h1 {
-    /* Shrink heading text on small screens using clamp */
-    font-size: clamp(1.2em, 5vw, 1.5em);
-    padding-left: 4px;
-    padding-right: 4px;
-    max-width: 98vw;
-  }
-  .hero-content {
-    padding: 16px 8px;         /* More padding on small screens */
-    max-width: 95%;
-    display: flex;
-    flex-direction: column;    /* Stack all content vertically */
-    align-items: center;       /* Center content horizontally */
-  }
-  .hero-button {
-    width: 100%;               /* Button fills width for easy tapping */
-    padding: 12px 0;
-    font-size: 1em;
-    margin: 16px 0 0 0;        /* Space above button */
-    display: block;
-    text-align: center;
+    font-size: 1.2em;
   }
   .hero-subtext {
-    font-size: clamp(0.95em, 2.5vw, 1em); /* Responsive scaling for subtext */
-    padding: 0 8px;
+    font-size: 1em;
   }
-
-  /* Make images fit the screen */
-  .story img, .hero img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .story, .cta {
-    min-height: 60vh; /* Shorter on small screens */
-    padding: 30px 8px; /* Adjust padding for mobile */
+  .cta-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1em;
+    margin-top: 16px;
   }
 }
-
-/* 
-  We use @media (max-width: 600px) to make the hero section look good on phones.
-  This changes padding and font size so everything fits on small screens.
-*/

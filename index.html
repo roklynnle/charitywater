@@ -3,51 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity: Water Hero Banner</title>
+    <title>charity: water</title>
+    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: Full-width background image with overlay and centered content -->
+    <!-- Hero Section: Fills the whole screen with a background image and overlay -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <!-- Official charity: water logo, centered above the heading -->
-            <img 
-                src="./img/charity-water-logo.png" 
-                alt="charity: water logo" 
-                style="display: block; margin: 0 auto 24px auto; max-width: 160px;"
-            >
-            <!-- Bold, uppercase yellow headline -->
-            <h1>YOU CAN’T FIX EVERYTHING. BUT THIS? YOU CAN.</h1>
-            <!-- White subtext -->
+        <!-- Overlay helps make text readable on the background image -->
+        <div class="hero-overlay">
+            <!-- Logo image at the top -->
+            <img src="./img/charity-water-logo.png" alt="charity: water logo" class="logo">
+            <!-- Main headline under the logo -->
+            <h1>YOU CAN’T FIX EVERYTHING.<br>BUT THIS? YOU CAN.</h1>
+            <!-- Subheader text -->
             <p class="hero-subtext">
                 785 million people don’t have access to clean water. You can help change that today.
             </p>
-            <!-- Yellow call-to-action button -->
-            <a href="#" class="hero-button">BE THE CHANGE</a>
+            <!-- Call-to-action button -->
+            <a href="#" class="cta-button">BE THE CHANGE</a>
         </div>
     </section>
 
-    <!-- Story Section: Shares a real-world impact story with text and an image -->
+    <!-- Story Section: Shares a real-world impact story -->
     <section class="story">
-        <!-- Section heading -->
         <h2>Our Story</h2>
-        <!-- Story text -->
         <p>
-            charity: water is a nonprofit organization on a mission to bring clean and safe drinking water to people in developing countries.
-            Every donation helps fund water projects for communities in need.
+            charity: water is a nonprofit organization on a mission to bring clean and safe drinking water to people in developing countries. Every donation helps fund water projects for communities in need.
         </p>
-        <!-- Placeholder image for the story section -->
-        <img src="https://via.placeholder.com/400x200?text=Our+Impact" alt="Our Impact">
+        <!-- Example image for the story section -->
+        <img src="https://via.placeholder.com/400x200?text=Our+Impact" alt="Our Impact" class="story-img">
     </section>
 
     <!-- Call-to-Action Section: Encourages visitors to donate -->
-    <section class="cta">
-        <!-- Section heading -->
+    <section class="cta-section">
         <h2>Make a Difference Today</h2>
-        <!-- CTA text -->
         <p>Your support can help change lives. Donate now to give the gift of clean water.</p>
-        <!-- Bold donation button -->
         <a href="#" class="cta-button">Donate Now</a>
     </section>
 </body>
