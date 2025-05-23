@@ -21,16 +21,23 @@ body {
 
 /* Hero section styles */
 .hero {
-  /* This sets the background image for the hero section */
-  background-image: url('./img/herophoto.png'); /* Updated to use your hero photo */
+  /* Set the uploaded image as the background */
+  background-image: url('./img/banner.jpg'); /* Change to your image name */
   background-size: cover;      /* Make the image cover the whole section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;/* Don't repeat the image */
-  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
   min-height: 70vh;            /* Make hero section tall */
   display: flex;               /* Use flexbox to center content */
   align-items: center;         /* Vertically center */
   justify-content: center;     /* Horizontally center */
+}
+
+/* Style for the hero logo image */
+.hero-logo {
+  width: 120px;         /* Makes the logo a good size */
+  display: block;       /* Makes sure it sits on its own line */
+  margin: 0 auto 20px;  /* Centers the logo and adds space below */
+  opacity: 0.9;         /* Makes the logo more visible */
 }
 
 /* Decorative hero background logo (lightly transparent and blended) */
