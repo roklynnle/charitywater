@@ -33,6 +33,18 @@ body {
   justify-content: center;     /* Horizontally center */
 }
 
+/* Decorative hero background logo (lightly transparent and blended) */
+.hero-bg-logo {
+  width: 120px;                  /* Make it smaller than the main logo */
+  max-width: 40vw;
+  display: block;
+  margin: 0 auto 1rem auto;      /* Center and add space below */
+  opacity: 0.25;                 /* Make it lightly transparent */
+  /* Optional: add a soft blur or blend for extra effect */
+  filter: blur(0.5px);
+  /* Place behind the main logo and heading if needed */
+}
+
 /* Logo styles: keeps the logo small and centered above the heading */
 .logo {
   max-width: 160px;           /* Limit logo width */
