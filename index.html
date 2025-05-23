@@ -17,15 +17,16 @@
     /* Logo at the top of the page */
     .logo-container {
       width: 100%;
-      text-align: center; /* Center the logo */
-      padding: 32px 0 16px 0; /* Space above and below */
-      background: #000; /* Black background for contrast */
+      text-align: center;
+      padding: 24px 0 12px 0;
+      background: #000;
     }
     .logo-img {
-      width: 120px; /* Good size for desktop */
-      max-width: 90vw; /* Responsive on mobile */
-      height: auto;
-      display: inline-block;
+      width: 90vw;        /* Responsive width for most screens */
+      max-width: 700px;   /* Don't let it get too big */
+      height: auto;       /* Keep aspect ratio */
+      display: block;
+      margin: 0 auto;     /* Center the image */
     }
 
     /* Hero section with dark background image */
@@ -102,10 +103,11 @@
   </style>
 </head>
 <body>
-  <!-- Logo at the top of the page -->
+  <!-- Logo banner at the top of the page -->
   <div class="logo-container">
-    <!-- Replace the src with your actual logo file path if needed -->
-    <img src="squareblackcharitywater.png" alt="charity: water logo" class="logo-img">
+    <!-- The logo image is inside the img folder -->
+    <!-- This image is wide and works well as a header/banner -->
+    <img src="./img/squareblackcharitywater-wide.png" alt="charity: water supporter banner" class="logo-img">
   </div>
   <!-- Hero Banner Section -->
   <section class="hero">
