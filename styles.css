@@ -19,17 +19,22 @@ body {
   padding: 0;
 }
 
-/* Hero section styles */
+/* Hero section styles for full width and height */
 .hero {
-  /* Set the uploaded image as the background */
-  background-image: url('./img/banner.jpg'); /* Change to your image name */
-  background-size: cover;      /* Make the image cover the whole section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;/* Don't repeat the image */
-  min-height: 70vh;            /* Make hero section tall */
-  display: flex;               /* Use flexbox to center content */
-  align-items: center;         /* Vertically center */
-  justify-content: center;     /* Horizontally center */
+  /* Use the correct background image */
+  background-image: url('./img/glasses-hero.jpg');
+  background-size: cover;         /* Stretch image to cover the area */
+  background-position: center;    /* Center the image */
+  background-repeat: no-repeat;   /* Do not repeat the image */
+  width: 100vw;                   /* 100% of the viewport width */
+  height: 100vh;                  /* 100% of the viewport height */
+  min-height: 100vh;              /* Ensure it fills the viewport */
+  margin: 0;                      /* Remove default margin */
+  display: flex;                  /* Center content */
+  align-items: center;            /* Vertically center */
+  justify-content: center;        /* Horizontally center */
+  /* No border-radius for a sharp edge-to-edge look */
+  border-radius: 0;
 }
 
 /* Style for the hero logo image */
@@ -64,7 +69,7 @@ body {
   text-align: center;
   /* Make the overlay a bit darker for better contrast */
   background: rgba(0,0,0,0.25); /* Slightly darker overlay */
-  border-radius: 10px;
+  border-radius: 0;             /* No rounded corners */
   padding: 30px 16px;
   max-width: 600px;             /* Reduce max-width for better readability */
   width: 100%;
