@@ -11,15 +11,15 @@
       font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
-      background: #000; /* Helps logo stand out at the top */
+      background: hsl(0, 2%, 89%); /* white background helps logo stand out */
     }
 
     /* Logo at the top of the page */
     .logo-container {
       width: 100%;
-      text-align: center;
-      padding: 24px 0 12px 0;
-      background: #000;
+      text-align: center; /* Center the logo */
+      padding: 24px 0 12px 0; /* ample Space above and below */
+      background: lch(100% 0.01 296.81); /* white background for contrast */
     }
     .logo-img {
       width: 90vw;        /* Responsive width for most screens */
@@ -85,7 +85,8 @@
         padding: 20px 0 10px 0;
       }
       .logo-img {
-        width: 70px;
+        width: 98vw;
+        max-width: 98vw;
       }
       .hero-title {
         font-size: 1.3em;          /* Smaller headline on mobile */
@@ -106,7 +107,6 @@
   <!-- Logo banner at the top of the page -->
   <div class="logo-container">
     <!-- The logo image is inside the img folder -->
-    <!-- This image is wide and works well as a header/banner -->
     <img src="./img/squareblackcharitywater-wide.png" alt="charity: water supporter banner" class="logo-img">
   </div>
   <!-- Hero Banner Section -->
