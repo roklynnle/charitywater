@@ -12,32 +12,29 @@
     Proxima Nova (use a similar system font as fallback)
 */
 
-/* Use a simple font stack for beginners */
+/* Use Proxima Nova font, fallback to sans-serif */
 body {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  background-color: #CBCDD1; /* Light Gray background */
-  color: #1A1A1A; /* Charcoal Black text */
   margin: 0;
   padding: 0;
 }
 
-/* Hero Section Styles for a full-width background image and bold, readable text */
-
-/* The .hero section uses a background image and centers its content */
+/* Hero section styles */
 .hero {
-  /* Use your own image file for the background */
-  background-image: url('herophoto.png');
+  /* This sets the background image for the hero section */
+  background-image: url('./img/glasses-hero.jpg');
   background-size: cover;      /* Make the image cover the whole section */
   background-position: center; /* Center the image */
-  color: #FFC907;              /* Yellow for main headline */
-  text-align: center;          /* Center all text */
-  padding: 60px 20px 80px 20px;/* Top, right, bottom, left padding */
-  position: relative;          /* Needed for overlay effect */
+  background-repeat: no-repeat;/* Don't repeat the image */
+  position: relative;          /* Needed for the overlay */
+  min-height: 70vh;            /* Make hero section tall */
+  display: flex;               /* Use flexbox to center content */
+  align-items: center;         /* Vertically center */
+  justify-content: center;     /* Horizontally center */
 }
 
-/* Add a dark overlay for better text contrast */
-.hero::before {
-  content: "";
+/* Dark overlay for better text contrast */
+.hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
@@ -48,45 +45,26 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
+  text-align: center;
+  padding: 30px 16px;
   max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Logo and supporter text styling */
-.hero-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.hero-logo img {
-  width: 120px;
-  height: auto;
-}
-
-.hero-supporter {
-  color: #fff;
-  font-size: 0.9em;
-  margin-top: 4px;
-  letter-spacing: 2px;
+  width: 100%;
 }
 
 /* Headline styles */
 .hero h1 {
-  font-size: 2.5em;
+  color: #FFC907;           /* Bright yellow */
+  font-size: 2.2em;
   font-weight: bold;
-  text-transform: uppercase; /* All Caps */
-  margin: 20px 0 16px 0;
-  color: #FFC907;            /* Yellow accent */
+  text-transform: uppercase; /* All caps */
+  margin-bottom: 18px;
   line-height: 1.1;
 }
 
-/* Subheadline styles */
-.hero-subheadline {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
+/* Subtext styles */
+.hero-subtext {
+  color: #fff;              /* White text */
+  font-size: 1.1em;
   margin-bottom: 32px;
 }
 
@@ -94,12 +72,12 @@ body {
 .hero-button {
   display: inline-block;
   background-color: #FFC907; /* Yellow */
-  color: #003366;            /* Navy Blue text */
+  color: #1A1A1A;            /* Black text */
   font-weight: bold;
   text-transform: uppercase;
   padding: 15px 32px;
-  border: 3px solid #1A1A1A; /* Charcoal Black border */
-  border-radius: 32px;
+  border: 3px solid #1A1A1A; /* Thick black border */
+  border-radius: 32px;       /* Pill shape */
   text-decoration: none;
   font-size: 1.1em;
   cursor: pointer;
@@ -107,7 +85,7 @@ body {
 }
 
 .hero-button:hover {
-  background-color: #fff;
+  background-color: #fff;    /* White on hover */
 }
 
 /* Story Section Styles */
@@ -154,26 +132,21 @@ body {
   background-color: #CBCDD1; /* Light Gray on hover */
 }
 
-/* Responsive Design: Makes the page look good on mobile devices */
-/* We use a media query to adjust padding and font size for small screens */
+/* Responsive design for mobile devices */
 @media (max-width: 600px) {
-  /* Make hero section have less padding on small screens */
+  /* Make hero section shorter and text smaller on small screens */
   .hero {
-    padding: 30px 5px 40px 5px;
+    min-height: 50vh;
+    padding: 20px 0;
   }
-
-  /* Make the headline smaller on small screens */
   .hero h1 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
-
-  /* Make the hero content fit better on small screens */
   .hero-content {
+    padding: 16px 4px;
     max-width: 95%;
   }
-
-  /* Make the button fill the width of the screen on small devices */
-  .hero-button, .cta-button {
+  .hero-button {
     width: 100%;
     padding: 12px 0;
     font-size: 1em;
@@ -185,3 +158,8 @@ body {
     height: auto;
   }
 }
+
+/* 
+  We use @media (max-width: 600px) to make the hero section look good on phones.
+  This changes padding and font size so everything fits on small screens.
+*/
