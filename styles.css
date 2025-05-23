@@ -33,6 +33,13 @@ body {
   justify-content: center;     /* Horizontally center */
 }
 
+/* Logo styles: keeps the logo small and centered above the heading */
+.logo {
+  max-width: 160px;           /* Limit logo width */
+  display: block;             /* Make logo a block element */
+  margin: 0 auto 1.5rem;      /* Center horizontally and add space below */
+}
+
 /* Content sits above the background image */
 .hero-content {
   text-align: center;
@@ -67,13 +74,26 @@ body {
   padding-right: 10px;
 }
 
+/* Style for paragraphs inside the hero section */
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.5rem);   /* Responsive font size */
+  max-width: 600px;                      /* Limit width for readability */
+  margin: 1rem auto 0;                   /* Space above and center horizontally */
+  padding: 0 1rem;                       /* Padding for small screens */
+  color: white;                          /* White text for contrast */
+}
+
 /* Subtext styles */
 .hero-subtext {
-  color: #fff;              /* White text */
-  /* Use clamp() for responsive font size */
-  font-size: clamp(1em, 2.5vw, 1.1em);
+  color: #fff;                                 /* White text */
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Keep font consistent */
+  font-size: clamp(1rem, 3vw, 1.5rem);         /* Responsive font size */
   margin-bottom: 32px;
-  padding: 0 10px;          /* Add padding for readability on small screens */
+  max-width: 600px;                            /* Limit width for readability */
+  margin-left: auto;                           /* Center horizontally */
+  margin-right: auto;
+  padding-left: 16px;                          /* Padding for small screens */
+  padding-right: 16px;
 }
 
 /* Call-to-action button styles */
