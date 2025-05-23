@@ -22,30 +22,21 @@ body {
 /* Hero section styles */
 .hero {
   /* This sets the background image for the hero section */
-  background-image: url('./img/glasses-hero.jpg');
+  background-image: url('https://via.placeholder.com/1200x600?text=Hero+Image'); /* Replace with your image */
   background-size: cover;      /* Make the image cover the whole section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;/* Don't repeat the image */
-  position: relative;          /* Needed for the overlay */
   min-height: 70vh;            /* Make hero section tall */
   display: flex;               /* Use flexbox to center content */
   align-items: center;         /* Vertically center */
   justify-content: center;     /* Horizontally center */
 }
 
-/* Dark overlay for better text contrast */
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-  z-index: 1;
-}
-
-/* Content sits above the overlay */
+/* Content sits above the background image */
 .hero-content {
-  position: relative;
-  z-index: 2;
   text-align: center;
+  background: rgba(255,255,255,0.08); /* Subtle background for readability */
+  border-radius: 10px;
   padding: 30px 16px;
   max-width: 700px;
   width: 100%;
@@ -53,12 +44,17 @@ body {
 
 /* Headline styles */
 .hero h1 {
-  color: #FFC907;           /* Bright yellow */
-  font-size: 2.2em;
+  color: #FFC907;                 /* Bright yellow */
+  font-size: 4em;                 /* Large font */
   font-weight: bold;
-  text-transform: uppercase; /* All caps */
+  text-transform: uppercase;       /* All caps */
   margin-bottom: 18px;
   line-height: 1.1;
+  text-shadow:
+    2px 2px 0 #1A1A1A,            /* Main shadow for depth */
+    4px 4px 8px #00336655;        /* Soft blue shadow for glow */
+  letter-spacing: 2px;
+  display: inline-block;
 }
 
 /* Subtext styles */
@@ -140,7 +136,7 @@ body {
     padding: 20px 0;
   }
   .hero h1 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   .hero-content {
     padding: 16px 4px;
