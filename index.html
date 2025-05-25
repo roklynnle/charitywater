@@ -8,19 +8,19 @@
   <!-- Add a link to Proxima Nova font using a similar web font (Montserrat as a free alternative) -->
   <!-- Proxima Nova is not free, so we use Montserrat for beginners -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Add a background image for the whole page using inline CSS on the body tag -->
-  <!-- This uses img/copy of charity: water.png as the background image -->
   <style>
+    /* Set the background image for the whole page */
     body {
-      /* Set the background image for the whole page */
-      background-image: url('Copy of Charity Water Landing Page Template (1).png');
-      background-size: cover; /* Make the image cover the whole page */
+      background-image: url('img/Copy of Charity Water Landing Page Template (1).png');
+      background-size: 105vw auto; /* Zoom the image in a bit more */
       background-repeat: no-repeat; /* Prevent the image from repeating */
-      background-position: center; /* Center the image */
+      background-position: 0 -80px; /* Move the image up instead of down */
+      background-position-x: center; /* Keep it centered horizontally */
     }
   </style>
+</head>
+<body>
+  <!-- The background image is set in the CSS above -->
   <header class="navbar">
     <div class="logo">
       <!-- Show an even larger charity: water logo in the top left (doubled again) -->
@@ -38,25 +38,52 @@
   <section class="hero">
     <!-- Removed the hero image ("hand holding water glass") -->
     <!-- Big title outside the box -->
-    <h1 class="big-title">
+    <h1 class="big-title" style="margin-top: 50px; font-size: 3em;">
+      <!-- Moved the title slightly down and made the text bigger -->
       One Click. One Glass. One Big Difference.
     </h1>
     <div class="hero-content">
-      <div class="donation-box">
+      <!-- Move the donation box a bit closer to the center using margin -->
+      <div class="donation-box" style="margin-left:auto; margin-right:180px;">
+        <!-- The donation box is now closer to the middle, but still on the right side -->
         <p>
           Every dollar you give funds real projects, with real impact—
           <strong>100% transparency, always.</strong><br/>
           Giving back has never been this easy!
         </p>
         <div class="donation-options">
-          <button>$10</button>
-          <button>$20</button>
-          <button>$50</button>
-          <button>Other</button>
+          <!-- 
+            Add an onclick event to each button.
+            When clicked, the button turns yellow (#ffc907) and others go back to #fed8c1.
+          -->
+          <button style="background-color: #fed8c1;" onclick="selectDonation(this)">$10</button>
+          <button style="background-color: #fed8c1;" onclick="selectDonation(this)">$20</button>
+          <button style="background-color: #fed8c1;" onclick="selectDonation(this)">$50</button>
+          <button style="background-color: #fed8c1;" onclick="selectDonation(this)">Other</button>
         </div>
-        <button class="give-btn">Give</button>
+        <!-- Make the Give button always yellow and clickable, with black text -->
+        <button class="give-btn" style="background-color: #ffc907; color: black;" onclick="selectGive(this)">Give</button>
       </div>
     </div>
   </section>
+  <!-- Add a simple script at the end of the body to handle button selection -->
+  <script>
+    // This function makes only the clicked donation option yellow, others go back to peach
+    function selectDonation(clickedBtn) {
+      var buttons = document.querySelectorAll('.donation-options button');
+      buttons.forEach(function(btn) {
+        btn.style.backgroundColor = '#fed8c1'; // Set to peach
+      });
+      clickedBtn.style.backgroundColor = '#ffc907'; // Set clicked to yellow
+
+      // Do NOT change the Give button color anymore
+    }
+
+    // This function is still here in case you want to do something when Give is clicked
+    function selectGive(giveBtn) {
+      // The Give button stays yellow, but you can add actions here if needed
+      // No color change needed
+    }
+  </script>
 </body>
 </html>
