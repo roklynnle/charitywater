@@ -1,19 +1,58 @@
-/* charity: water Brand Colors & Fonts
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #1e2f59; /* Navy blue */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+/* Header */
+header h1 {
+  font-size: 2.5em;
+  color: #b3e5fc; /* Sky blue */
+  margin-bottom: 30px;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+/* Images */
+main img {
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  border: 4px solid white;
+  border-radius: 10px;
+  display: block;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+/* Sky Blue Headline */
+.water-justice {
+  font-size: 2em;
+  color: #b3e5fc;
+  margin-top: 30px;
+}
 
-*/
+/* Donate Box */
+.donate-box {
+  background-color: #ffffff;
+  color: #1e2f59;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.donate-box button {
+  background-color: #fce5d8;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donate-box button:hover {
+  background-color: #ffd2b3;
+}
