@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Water</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Add a link to Proxima Nova font using a similar web font (Montserrat as a free alternative) -->
+  <!-- Proxima Nova is not free, so we use Montserrat for beginners -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Add your HTML here -->
+  <!-- Add a background image for the whole page using inline CSS on the body tag -->
+  <!-- This uses img/copy of charity: water.png as the background image -->
+  <style>
+    body {
+      /* Set the background image for the whole page */
+      background-image: url('Copy of Charity Water Landing Page Template (1).png');
+      background-size: cover; /* Make the image cover the whole page */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-position: center; /* Center the image */
+    }
+  </style>
+  <header class="navbar">
+    <div class="logo">
+      <!-- Show an even larger charity: water logo in the top left (doubled again) -->
+      <img src="img/cw_logo-2.png" alt="charity: water logo" style="width:192px; height:auto;" />
+      <!-- Removed the text next to the logo for a cleaner look -->
+    </div>
+    <nav class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Take Action</a>
+      <a href="#">Why charity: water?</a>
+      <button class="donate-btn">Donate!</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <!-- Removed the hero image ("hand holding water glass") -->
+    <!-- Big title outside the box -->
+    <h1 class="big-title">
+      One Click. One Glass. One Big Difference.
+    </h1>
+    <div class="hero-content">
+      <div class="donation-box">
+        <p>
+          Every dollar you give funds real projects, with real impact—
+          <strong>100% transparency, always.</strong><br/>
+          Giving back has never been this easy!
+        </p>
+        <div class="donation-options">
+          <button>$10</button>
+          <button>$20</button>
+          <button>$50</button>
+          <button>Other</button>
+        </div>
+        <button class="give-btn">Give</button>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
