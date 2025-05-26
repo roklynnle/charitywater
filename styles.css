@@ -17,3 +17,216 @@ Fonts:
 - Avenir
 
 */
+
+/* Primary and secondary colors */
+:root {
+  --primary-color: #ffd600; /* bright yellow */
+  --secondary-color: #222;  /* dark gray/black */
+  --white: #fff;
+}
+
+/* Remove default margin and set background color */
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Set main font */
+  background-color: var(--white);
+}
+
+/* Header styles */
+.navbar {
+  display: flex; /* Arrange items in a row */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center items vertically */
+  background-color: var(--primary-color); /* Use primary color */
+  padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+/* Navigation links styles */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Make nav links look like links (no underline), add more space, and keep them bold */
+.nav-links a {
+  text-decoration: none;                /* Remove underline */
+  color: var(--secondary-color);
+  margin-right: 36px;                   /* More space between links */
+  font-weight: bold;
+  font-size: 1.08em;                    /* Slightly larger for visibility */
+  transition: color 0.2s;
+}
+
+.nav-links a:last-child {
+  margin-right: 0;
+}
+
+.nav-links a:hover {
+  color: #2E9DF7;
+  cursor: pointer;
+}
+
+/* Donate button in navbar */
+.donate-btn {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.08em;                    /* Slightly larger */
+  font-weight: bold;
+  margin-left: 10px;                    /* Space from links */
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Hero image styles */
+.hero-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Hero content box */
+.hero-content {
+  /* Center the donation box horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  position: static;
+  transform: none;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  max-width: 100%;
+  min-height: 0;
+  box-shadow: none;
+}
+
+/* Main headline */
+.hero-content h1 {
+  margin-top: 0;
+  color: var(--secondary-color);
+  font-size: 1.5em;
+}
+
+/* Style for the big title */
+.big-title {
+  /* Use Montserrat font as a free alternative to Proxima Nova */
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.5em; /* Make the text large */
+  font-weight: bold;
+  text-align: center; /* Center the text */
+  margin-top: 30px; /* Add space above */
+  margin-bottom: 30px; /* Add space below */
+  width: 100%; /* Make it stretch across the screen */
+  letter-spacing: 1px;
+  color: #fffce1; /* Light yellow color for the title */
+  /* Add a little shadow for readability if needed */
+  /* text-shadow: 1px 1px 2px #aaa; */
+}
+
+/* Style for the donation box */
+.donation-box {
+  background-color: #fffce1;
+  padding: 24px 18px;         /* Slightly more padding */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  max-width: 420px;           /* 50% wider than before (was 280px) */
+  width: 100%;
+}
+
+/* Donation box styles */
+.donation-box p {
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+/* Donation options buttons */
+.donation-options {
+  margin-bottom: 12px;
+}
+
+.donation-options button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 12px 22px;         /* Bigger buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.18em;                    /* Make dollar amounts a bit bigger */
+}
+
+/* Give button */
+.give-btn {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 14px 32px;         /* Bigger button */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.18em;                    /* Make Give button text a bit bigger */
+  font-weight: bold;
+}
+
+/* Make sure all text uses Proxima Nova */
+.navbar,
+.logo,
+.nav-links a,
+.donate-btn,
+.hero,
+.hero-image,
+.hero-content,
+.hero-content h1,
+.big-title,
+.donation-box,
+.donation-box p,
+.donation-options button,
+.give-btn {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .hero-content {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links a, .donate-btn {
+    margin-bottom: 8px;
+  }
+}
