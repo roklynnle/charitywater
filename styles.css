@@ -90,11 +90,10 @@ header img.logo {
 /* This makes sure the logo is in the bottom right and has no border */
 .water-can-logo {
   position: absolute; /* Place the logo over the hero image */
-  bottom: 10px;       /* 10px from the bottom */
+  bottom: 15px;       /* 10px from the bottom */
   right: 10px;        /* 10px from the right */
   width: 80px;        /* Set the logo width */
   height: auto;       /* Keep the logo's shape */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Add a shadow for visibility */
   border: none !important; /* Remove any border from the logo */
   outline: none;           /* Remove any outline */
   padding: 0;              /* No padding */
