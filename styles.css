@@ -20,6 +20,7 @@ header img.logo {
 
 .donate-button {
   background-color: #FFC907;
+  color: #002244; /* Set the text color to dark blue */
   border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
@@ -90,7 +91,7 @@ header img.logo {
 /* This makes sure the logo is in the bottom right and has no border */
 .water-can-logo {
   position: absolute; /* Place the logo over the hero image */
-  bottom: 15px;       /* 10px from the bottom */
+  bottom: 20px;       /* 20px from the bottom */
   right: 10px;        /* 10px from the right */
   width: 80px;        /* Set the logo width */
   height: auto;       /* Keep the logo's shape */
