@@ -102,11 +102,25 @@
       }, 2000);
     }
 
-    // Add a click event to all buttons on the page
+    // When the page is ready
     document.addEventListener('DOMContentLoaded', function() {
+      // Select all <button> elements
       var buttons = document.querySelectorAll('button');
+      // Select all elements with the class "cta-button"
+      var ctaButtons = document.querySelectorAll('.cta-button');
+
+      // Add confetti to all buttons
       buttons.forEach(function(btn) {
         btn.addEventListener('click', showConfetti);
+      });
+
+      // Add confetti to all CTA buttons (like the yellow link)
+      ctaButtons.forEach(function(cta) {
+        cta.addEventListener('click', function(event) {
+          showConfetti();
+          // Prevent the link from navigating away (for demo)
+          event.preventDefault();
+        });
       });
     });
   </script>
