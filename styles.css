@@ -95,6 +95,14 @@ header img.logo {
   height: auto;       /* Keep aspect ratio */
   /* Add a simple drop shadow for visibility */
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: none;       /* No border for the logo */
+}
+
+/* Make sure only the main hero image has a border */
+.hero-image img:not(.water-can-logo) {
+  max-width: 100%;
+  border: 10px solid #FFC907;
+  border-radius: 8px;
 }
 
 .info-box {
