@@ -20,7 +20,7 @@ header img.logo {
 
 .donate-button {
   background-color: #FFC907;
-  color: #002244; /* Set the text color to dark blue */
+  color: #002244; 
   border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
@@ -78,7 +78,7 @@ header img.logo {
 .hero-image {
   flex: 1;
   padding: 1rem;
-  position: relative; /* Allows absolute positioning inside */
+  position: relative; 
 }
 
 .hero-image img {
@@ -87,21 +87,19 @@ header img.logo {
   border-radius: 8px;
 }
 
-/* Style for the water can logo */
-/* This makes sure the logo is in the bottom right and has no border */
 .water-can-logo {
-  position: absolute; /* Place the logo over the hero image */
-  bottom: 20px;       /* 20px from the bottom */
-  right: 10px;        /* 10px from the right */
-  width: 80px;        /* Set the logo width */
-  height: auto;       /* Keep the logo's shape */
-  border: none !important; /* Remove any border from the logo */
-  outline: none;           /* Remove any outline */
-  padding: 0;              /* No padding */
-  background: none;        /* No background */
+  position: absolute; 
+  bottom: 20px;       
+  right: 5px;        
+  width: 80px;        
+  height: auto;       
+  border: none !important; 
+  outline: none;           
+  padding: 0;              
+  background: none;        
 }
 
-/* Make sure only the main hero image has a border, not the logo */
+
 .hero-image img:not(.water-can-logo) {
   max-width: 100%;
   border: 10px solid #FFC907;
