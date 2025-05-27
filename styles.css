@@ -1,140 +1,156 @@
 body {
   margin: 0;
   font-family: 'Proxima Nova', sans-serif;
-  background-color: #fff7e1;
-  color: #1a1a1a;
+  background-color: #fff7e1; /* Light background color */
+  color: #1a1a1a; /* Main text color */
 }
 
+/* Header styles */
 header {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #1a1a1a; /* Dark background for header */
+  color: white; /* White text in header */
+  padding: 1rem 2rem; /* Space inside header */
+  display: flex; /* Place items in a row */
+  justify-content: space-between; /* Space between logo and button */
+  align-items: center; /* Center items vertically */
 }
 
+/* Logo image in header */
 header img.logo {
-  height: 40px;
+  height: 40px; /* Set logo height */
 }
 
+/* Donate button styles */
 .donate-button {
-  background-color: #FFC907;
-  color: #002244; 
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #FFC907; /* Yellow background */
+  color: #002244; /* Dark blue text color */
+  border: none; /* No border */
+  padding: 0.5rem 1rem; /* Space inside button */
+  font-weight: bold; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth color change */
 }
 
+/* Donate button hover effect */
 .donate-button:hover {
-  background-color: #ffb300;
+  background-color: #ffb300; /* Slightly darker yellow on hover */
 }
 
+/* Hero section styles */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 2rem;
+  display: flex; /* Place text and image side by side */
+  flex-wrap: wrap; /* Wrap on small screens */
+  align-items: center; /* Center items vertically */
+  padding: 2rem; /* Space around hero section */
 }
 
+/* Text part of hero section */
 .hero-text {
-  flex: 1;
-  padding: 1rem;
-  color: #1a1a1a;
+  flex: 1; /* Take up equal space */
+  padding: 1rem; /* Space inside */
+  color: #1a1a1a; /* Text color */
 }
 
+/* Hero headline */
 .hero-text h2 {
-  font-size: 2rem;
-  color: #1a1a1a;
+  font-size: 2rem; /* Large text */
+  color: #1a1a1a; /* Headline color */
 }
 
+/* Hero paragraph */
 .hero-text p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  color: #1a1a1a;
+  font-size: 1.1rem; /* Slightly larger text */
+  margin-top: 1rem; /* Space above paragraph */
+  color: #1a1a1a; /* Paragraph color */
 }
 
+/* Call-to-action button styles */
 .cta-button {
-  background-color: #FFC907;
-  color: #003366;
-  padding: 1rem 1.5rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #FFC907; /* Yellow background */
+  color: #003366; /* Dark blue text */
+  padding: 1rem 1.5rem; /* Space inside button */
+  font-weight: bold; /* Bold text */
+  font-size: 1.1rem; /* Larger text */
+  border-radius: 50px; /* Very rounded corners */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Allow margin and padding */
+  margin-top: 2rem; /* Space above button */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color change */
 }
 
+/* Call-to-action button hover effect */
 .cta-button:hover {
-  background-color: #ffb300;
-  color: #002244;
+  background-color: #ffb300; /* Darker yellow on hover */
+  color: #002244; /* Darker blue text on hover */
 }
 
+/* Image part of hero section */
 .hero-image {
-  flex: 1;
-  padding: 1rem;
-  position: relative; 
+  flex: 1; /* Take up equal space */
+  padding: 1rem; /* Space inside */
+  position: relative; /* Needed for absolute positioning of logo */
 }
 
+/* Main hero image styles */
 .hero-image img {
-  max-width: 100%;
-  border: 10px solid #FFC907;
-  border-radius: 8px;
+  max-width: 100%; /* Make image responsive */
+  border: 10px solid #FFC907; /* Yellow border */
+  border-radius: 8px; /* Rounded corners */
 }
 
+/* Water can logo styles */
 .water-can-logo {
-  position: absolute; 
-  bottom: 20px;       
-  right: 5px;        
-  width: 80px;        
-  height: auto;       
-  border: none !important; 
-  outline: none;           
-  padding: 0;              
-  background: none;        
+  position: absolute; /* Place over the main image */
+  bottom: 20px;       /* 20px from the bottom */
+  right: 5px;         /* 5px from the right */
+  width: 80px;        /* Set logo width */
+  height: auto;       /* Keep logo shape */
+  border: none !important; /* Remove any border */
+  outline: none;           /* Remove outline */
+  padding: 0;              /* No padding */
+  background: none;        /* No background */
 }
 
-
+/* Make sure only the main hero image has a border, not the logo */
 .hero-image img:not(.water-can-logo) {
   max-width: 100%;
   border: 10px solid #FFC907;
   border-radius: 8px;
 }
 
+/* Info box section styles */
 .info-box {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 1.5rem;
-  margin: 2rem;
-  border-radius: 10px;
-  font-size: 1rem;
+  background-color: #1a1a1a; /* Dark background */
+  color: white; /* White text */
+  padding: 1.5rem; /* Space inside */
+  margin: 2rem; /* Space outside */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 1rem; /* Normal text size */
 }
 
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column; /* Stack hero text and image */
   }
 
   .hero-text {
-    order: 1;
+    order: 1; /* Show text first */
   }
 
   .hero-image {
-    order: 2;
+    order: 2; /* Show image second */
   }
 
   .cta-button {
     display: block;
-    margin: 2rem auto 0 auto;
+    margin: 2rem auto 0 auto; /* Center button */
     text-align: center;
   }
 }
 
+/* Responsive styles for larger screens */
 @media (min-width: 769px) {
   .hero-text {
     display: flex;

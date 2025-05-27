@@ -4,35 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charity: Water - Give Safe Drinking Water</title>
+  <!-- Link to Google Fonts for custom font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header section with logo and Donate button -->
   <header>
+    <!-- Charity: Water logo image -->
     <img src="img/charitywater_logo_horizontal_WhiteText.png" alt="charity: water logo" class="logo">
+    <!-- Donate button -->
     <button class="donate-button">💧 Donate</button>
   </header>
 
+  <!-- Hero section with main message and image -->
   <section class="hero">
+    <!-- Text part of the hero section -->
     <div class="hero-text">
+      <!-- Main headline -->
       <h2>Give a Family Safe Drinking Water for $10</h2>
+      <!-- Supporting paragraph -->
       <p>
         Donate in a tap, fund a GPS-verified well, and receive photo stories so you see exactly how your gift creates lasting change.
       </p>
+      <!-- Call-to-action button -->
       <a href="#" class="cta-button">➔ Make your pledge here</a>
     </div>
+    <!-- Image part of the hero section -->
     <div class="hero-image">
+      <!-- Main hero image -->
       <img src="img/Madagascar_2019_CG-2679.jpg" alt="Smiling girl at water tap">
+      <!-- Water can logo placed at the bottom right corner of the hero image -->
       <img src="img/water-can-transparent.png" alt="Water can logo" class="water-can-logo">
     </div>
   </section>
 
+  <!-- Info box section with more details -->
   <section class="info-box">
     <p>
       Your gift of just $10 brings clean, safe water to three people in need. Follow every step of your project with real-time GPS updates, photos, and personal stories—so you’ll see exactly how your generosity transforms lives. By joining this journey, you become part of a global community striving to make a tangible difference. Each update brings you closer to the people whose lives are being changed, fostering a connection that transcends distance. Your support not only quenches thirst but also empowers communities by improving health, education, and economic opportunities. Together, we are creating ripples of change that echo far beyond the initial gift, nurturing hope and resilience in the hearts of those we reach. Thank you for being a catalyst for a brighter, healthier future.
     </p>
   </section>
+
+  <!-- Place this script just before the closing </body> tag -->
+  <!-- This script adds a simple confetti effect when any button is clicked -->
+  <script>
+    // This function creates confetti pieces and animates them
+    function showConfetti() {
+      // Create a container for confetti
+      var confettiContainer = document.createElement('div');
+      confettiContainer.style.position = 'fixed';
+      confettiContainer.style.left = 0;
+      confettiContainer.style.top = 0;
+      confettiContainer.style.width = '100vw';
+      confettiContainer.style.height = '100vh';
+      confettiContainer.style.pointerEvents = 'none'; // Let clicks pass through
+      confettiContainer.style.zIndex = 9999; // Show above everything
+
+      // Add 30 confetti pieces
+      for (var i = 0; i < 30; i++) {
+        var confetti = document.createElement('div');
+        // Set random size and color for each piece
+        var size = Math.random() * 12 + 8; // 8px to 20px
+        confetti.style.width = size + 'px';
+        confetti.style.height = size + 'px';
+        confetti.style.backgroundColor = ['#FFC907', '#002244', '#00BFFF', '#FF69B4', '#32CD32'][Math.floor(Math.random() * 5)];
+        confetti.style.position = 'absolute';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = '-30px';
+        confetti.style.borderRadius = '50%';
+        confetti.style.opacity = 0.8;
+
+        // Animate each confetti piece to fall down
+        var fall = Math.random() * 400 + 300; // 300px to 700px
+        var rotate = Math.random() * 360;
+        confetti.animate([
+          { transform: 'translateY(0) rotate(0deg)' },
+          { transform: 'translateY(' + fall + 'px) rotate(' + rotate + 'deg)' }
+        ], {
+          duration: Math.random() * 800 + 1200, // 1.2s to 2s
+          easing: 'ease-out',
+          fill: 'forwards'
+        });
+
+        confettiContainer.appendChild(confetti);
+      }
+
+      // Add confetti to the page
+      document.body.appendChild(confettiContainer);
+
+      // Remove confetti after 2 seconds
+      setTimeout(function() {
+        document.body.removeChild(confettiContainer);
+      }, 2000);
+    }
+
+    // Add a click event to all buttons on the page
+    document.addEventListener('DOMContentLoaded', function() {
+      var buttons = document.querySelectorAll('button');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', showConfetti);
+      });
+    });
+  </script>
 </body>
 </html>
