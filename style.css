@@ -1,0 +1,23 @@
+/* Import the Proxima Nova font from an online source */
+/* Note: Proxima Nova is a paid font, so we use a similar free font for beginners */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* Set the font for the whole page */
+https://janedoe.github.io/charity-water-lp/* This will use Proxima Nova if it's installed, otherwise Montserrat, Arial, or any sans-serif font */
+body {
+    font-family: 'Proxima Nova', 'Montserrat', Arial, sans-serif;
+}
+
+/* Set the background image for the main page */
+.main-background {
+    /* Use the image as the background */
+    background-image: url('charity water 2.jpg');
+    /* Make the image cover the whole area */
+    background-size: cover;
+    /* Center the background image */
+    background-position: center;
+    /* Make sure the background does not repeat */
+    background-repeat: no-repeat;
+    /* Set a minimum height so the image is visible */
+    min-height: 100vh;
+}

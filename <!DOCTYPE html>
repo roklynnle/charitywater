@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page with Background Image</title>
+  <style>
+    /* Set the background image for the whole page */
+    body {
+      background-image: url("charity water 2.jpg"); /* Use your image file name here */
+      background-size: cover; /* Make the image cover the whole page */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-position: center; /* Center the image */
+    }
+  </style>
+</head>
+<body>
+  <!-- Main page content -->
+  <h1>Welcome to the Main Page</h1>
+  <p>This page has a background image.</p>
+</body>
+</html>

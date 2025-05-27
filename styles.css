@@ -1,19 +1,106 @@
-/* charity: water Brand Colors & Fonts
+/* Import Fonts (Fallback to sans-serif if not available) */
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Avenir:wght@400;700&display=swap');
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+/* Set the main font and background color for the page */
+body {
+  font-family: 'Proxima Nova', 'Avenir', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+/* Header styles */
+header {
+  background-color: #053364; /* Official Navy Blue */
+  padding: 1rem 0;
+}
 
-*/
+/* Container to center header content */
+header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fcca38; /* Official Yellow */
+}
+
+/* Call-to-action button styles */
+.cta-button {
+  background-color: #894929; /* Official Orange/Brown */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: #fcca38; /* Official Yellow for hover effect */
+  color: #053364; /* Navy text on yellow */
+}
+
+/* Hero Section styles */
+.hero {
+  height: 90vh;
+  background: url('https://via.placeholder.com/1600x900') center center/cover no-repeat;
+  position: relative;
+}
+
+/* Overlay to make hero text readable */
+.hero .overlay {
+  background: rgba(5, 51, 100, 0.7); /* Navy Blue overlay for readability */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Hero text styles */
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Hero headline styles */
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #fcca38; /* Official Yellow */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Hero paragraph styles */
+.hero-text p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}

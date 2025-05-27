@@ -1,12 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charity:Water</title>
+  <!-- Use a professional-looking font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Set the body font to Montserrat for a professional look */
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    /* Simple navigation bar styles */
+    .navbar {
+      background: #0057A8; /* Brand blue */
+      padding: 10px 0;
+      text-align: center;
+    }
+    .navbar a {
+      color: #FFD600; /* Brand yellow */
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    /* Make the call-to-action button stand out */
+    .cta-button {
+      background: #FFD600; /* Brand yellow */
+      color: #0057A8;     /* Brand blue text */
+      padding: 10px 24px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #FFC107; /* Slightly darker yellow on hover */
+    }
+    /* Social media icon styles */
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 8px;
+    }
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+    }
+    /* Footer styles for better look */
+    footer {
+      background: #0057A8;
+      color: #FFD600;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      border-top: 4px solid #FFD600;
+    }
+    footer .social-icons {
+      margin-top: 8px;
+    }
+    footer a {
+      color: #FFD600;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .cta-button {
+        width: 100%;
+        font-size: 1em;
+      }
+      .main-background {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Add your HTML here -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <!-- Simple navigation links -->
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Add a class to the main container for background styling -->
+    <div class="main-background" style="
+      background-image: url('charity\ water\ 2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    ">
+      <!-- Header -->
+      <header>
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+          <!-- Logo for the website -->
+          <div class="logo" style="display: flex; align-items: center;">
+            <!-- Updated Charity:Water logo from Wikimedia -->
+            <img src="water-can-transparent.png" style="height: 40px;" alt="Charity:Water logo">
+            <span style="color: white; margin-left: 4px;">
+              Charity:Water
+            </span>
+          </div>
+          <!-- Call-to-action button stands out now -->
+          <a href="#" class="cta-button">Join us</a>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero" style="
+        min-height: 80vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start; /* Align to the left */
+      ">
+        <div style="
+          margin-top: 40px;
+          margin-left: 15%;         /* Move the box 15% from the left edge */
+          padding: 40px 10px;
+          text-align: left;
+          max-width: 750px;
+          border-radius: 8px;
+        ">
+          <!-- Main headline -->
+          <h1 style="
+            color: #FFD600;
+            font-size: 4em;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-weight: 400;
+          ">
+            Hope Flows<br>
+            Where You Take Action
+          </h1>
+          <!-- Supporting text -->
+          <p style="
+            color: white;
+            font-size: 1.8em;
+            margin-top: 0;
+            font-weight: 300;
+          ">
+            Bring clean water to communities in need—your action drives lasting change,
+            and every step forward tells a story that matters.
+          </p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" style="background: #7ba7ba; padding: 20px; margin: 20px; border-radius: 8px;">
+        <h2 style="color: #0057A8;">About Charity:Water</h2>
+        <p style="color: #333;">
+          Charity:Water is a non-profit organization bringing clean and safe drinking water to people in developing countries.
+        </p>
+      </section>
+
+    </div>
+
+    <!-- Improved Footer with social media icons -->
+    <footer>
+      <!-- Footer text -->
+      &copy; 2025 Charity:Water &nbsp;|&nbsp; 
+      Contact: <span style="color: #fff;">info@charitywater.org</span>
+      <!-- Social media icons in the footer -->
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+          <img src="facebook2.webp" alt="Facebook" style="width: 40px; height: 40px;">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="twitter.webp" alt="Twitter" style="width: 26px; height: 26px;">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="instagram.png" alt="Instagram" style="width: 28px; height: 28px;">
+        </a>
+      </div>
+    </footer>
 </body>
 </html>
