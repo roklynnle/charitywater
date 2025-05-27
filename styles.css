@@ -77,12 +77,24 @@ header img.logo {
 .hero-image {
   flex: 1;
   padding: 1rem;
+  position: relative; /* Allows absolute positioning inside */
 }
 
 .hero-image img {
   max-width: 100%;
   border: 10px solid #FFC907;
   border-radius: 8px;
+}
+
+/* Style for the water can logo */
+.water-can-logo {
+  position: absolute; /* Position it over the hero image */
+  bottom: 10px;       /* 10px from the bottom */
+  right: 10px;        /* 10px from the right */
+  width: 80px;        /* Set a simple width */
+  height: auto;       /* Keep aspect ratio */
+  /* Add a simple drop shadow for visibility */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .info-box {
