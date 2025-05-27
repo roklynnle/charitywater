@@ -75,7 +75,6 @@ header img.logo {
 }
 
 .hero-image {
-  position: relative; /* Needed for absolute positioning inside */
   flex: 1;
   padding: 1rem;
 }
@@ -84,16 +83,6 @@ header img.logo {
   max-width: 100%;
   border: 10px solid #FFC907;
   border-radius: 8px;
-}
-
-/* Style for the yellow icon in the bottom right corner of the hero image */
-.corner-icon {
-  /* This makes the icon appear in the bottom right corner */
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;  /* You can adjust the size as needed */
-  height: 60px;
 }
 
 .info-box {
