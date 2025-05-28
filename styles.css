@@ -1,19 +1,248 @@
-/* charity: water Brand Colors & Fonts
+/* charity: water Brand Colors & Fonts */
+:root {
+  --yellow: #FCD20E;
+  --blue: #2E9DF7;
+  --black: #000000;
+  --white: #ffffff;
+  --light-gray: #F4F4F4;
+  --text: #333333;
+  --transition: 0.3s ease;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+h1, h2, h3, .logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-*/
+.hero {
+  background-color: var(--light-gray);
+  padding: 3rem 1rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.text-area {
+  flex: 1 1 45%;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo img {
+  width: 48px;
+  animation: popIn 0.5s ease-out;
+}
+
+.logo h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: var(--black);
+  transition: color var(--transition);
+}
+
+h2:hover {
+  color: var(--blue);
+}
+
+p {
+  font-size: 1.125rem;
+  max-width: 500px;
+  color: #555;
+}
+
+.cta {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cta input {
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  font-size: 1rem;
+  transition: border var(--transition);
+}
+
+.cta input:focus {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.cta button {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.cta button:hover {
+  background-color: #e6c200;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.image-area {
+  flex: 1 1 45%;
+  text-align: center;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.image-area img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.image-area img:hover {
+  transform: scale(1.02);
+}
+
+/* Info Section */
+.info-section {
+  background-color: var(--white);
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  animation: fadeIn 1s ease-out;
+}
+
+.info-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+footer {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .cta input, .cta button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+
+  .cta input, .cta button {
+    padding: 0.75rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+  }
+}
