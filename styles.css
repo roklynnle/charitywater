@@ -17,3 +17,231 @@ Fonts:
 - Avenir
 
 */
+
+/* Use Charity Water's brand colors for background, font, and buttons */
+
+/* Set the background color and font for the whole page */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #8BD1CB; /* light blue secondary brand color */
+  color: #222; /* dark text for good contrast */
+}
+
+/* Main headline style */
+h1 {
+  color: #2E9DF7; /* blue brand color for headline */
+}
+
+/* Sub-headline style */
+h2 {
+  color: #159A48; /* dark green brand color for sub-headline */
+}
+
+/* Example button style using brand colors */
+button, .donate-btn, header .give-btn {
+  background-color: #2E9DF7; /* blue brand color for buttons */
+  color: #FFF9EF; /* light background for text */
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Optional: Add a hover effect for buttons */
+button:hover, .donate-btn:hover, header .give-btn:hover {
+  background-color: #4FCB53; /* green brand color on hover */
+}
+
+/* Card style for main content */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  max-width: 700px; /* increased width */
+  /* Align the card to the left with margin on the left side */
+  margin: 40px 0 40px 40px;
+  flex-shrink: 0;
+}
+
+/* Container to hold the card and images side by side */
+.card-and-images {
+  display: flex;
+  align-items: flex-start;
+  /* Add space above and below */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Images on the right of the card */
+.side-images {
+  margin-left: 32px;
+  display: flex;
+  flex-direction: row; /* align images horizontally */
+  gap: 20px; /* space between images */
+  align-items: flex-end; /* align images to the bottom for a pleasing look */
+  justify-content: center;
+  margin-top: 80px; /* increased space above images to bring them down more */
+}
+
+/* Style each image to look nice */
+.side-img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  object-fit: cover;
+  /* Add a border for a clean look */
+  border: 3px solid #fff;
+}
+
+/* Hero section styles */
+.hero {
+  /* Use a blue brand color for the hero background */
+  background-color: #2E9DF7;
+  /* Add some space inside the hero */
+  padding: 32px 0 24px 0;
+  /* Center the text */
+  text-align: center;
+  /* White text for contrast */
+  color: #fff;
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+/* Container for hero image and text */
+.hero-content {
+  display: flex;              /* Use flex to align logo and text horizontally */
+  align-items: center;        /* Vertically center logo and text */
+  justify-content: flex-start;/* Align content to the left */
+  text-align: left;           /* Align text to the left inside the block */
+  max-width: 700px;           /* Limit width for better appearance */
+  margin: 0 auto;             /* Center the whole hero-content in the hero */
+}
+
+/* Logo image style */
+.hero-logo {
+  vertical-align: middle;
+  width: 80px;   /* increased size */
+  height: 80px;  /* increased size */
+  margin-right: 16px;
+  display: inline-block;
+}
+
+/* Hero text style */
+.hero-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Center the hero content in the hero section */
+.hero {
+  text-align: center;
+}
+
+/* Hero headline style */
+.hero h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Hero message style */
+.hero p {
+  margin: 12px 0 0 0;
+  font-size: 1.1rem;
+}
+
+/* Position the call to action button in the top right of the hero */
+.hero {
+  background-color: #2E9DF7;
+  padding: 32px 0 24px 0;
+  color: #fff;
+  text-align: center;
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+/* Add a bar at the top of the hero to hold the GIVE button on the right */
+.hero-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Move content to the right */
+  align-items: center;
+  margin-bottom: 8px;
+  /* No border or background needed, just for layout */
+}
+
+/* Remove absolute positioning from the button so it sits in the bar */
+.hero-cta {
+  position: static;
+  margin-right: 24px; /* Space from the right edge */
+  text-decoration: none;
+}
+
+/* Style for the call to action button */
+.hero-cta {
+  position: static;
+  margin-right: 24px; /* Space from the right edge */
+  text-decoration: none;
+}
+
+/* Style for the GIVE button text */
+.give-btn-text {
+  background-color: #FFC907; /* charity: water yellow */
+  color: #111; /* bold black text */
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+/* Banner card styles */
+.banner-card {
+  background-color: #FFC907; /* charity: water yellow */
+  border-radius: 8px;
+  padding: 18px 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Banner text style */
+.banner-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Donate Now button style */
+.donate-btn {
+  background-color: #111; /* black */
+  color: #fff; /* white text */
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Responsive: Stack card and images on small screens */
+@media (max-width: 900px) {
+  .card-and-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-images {
+    margin-left: 0;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .side-img {
+    width: 100px;
+  }
+}
