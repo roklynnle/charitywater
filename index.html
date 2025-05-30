@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charity Landing Page</title>
+  <!-- 
+    We use a style block here for simplicity.
+    You can move these styles to a separate style.css file if you want.
+  -->
   <style>
     /* Define brand colors as variables for easy use */
     :root {
@@ -33,7 +37,7 @@
       font-weight: bold;
     }
     .nav-logo-img {
-      height: 32px;
+      height: 40px;
       width: auto;
       vertical-align: middle;
       margin-right: 8px;
@@ -83,7 +87,8 @@
 
     /* Hero section styles */
     .hero {
-      background-image: url('images/herophoto.png'); /* Replace with your image path */
+      /* charity: water campaign photo from their site */
+      background-image: url('https://www.charitywater.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-image.8b6e2e7b.jpg&w=1920&q=75');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -165,14 +170,14 @@
 <body>
   <!-- Logo banner at the top -->
   <div class="logo-container">
-    <!-- Logo image and site name -->
-    <img src="images/cw_logo.png" alt="charity: water logo" class="nav-logo-img">
+    <!-- Official charity: water logo from their CDN -->
+    <img src="https://www.charitywater.org/_next/static/media/logo.2c489fc2.svg" alt="charity: water logo" class="nav-logo-img">
     Charity: Water
   </div>
   <!-- Navigation bar with hamburger menu -->
   <nav>
     <div class="nav-brand">
-      <img src="images/cw_logo.png" alt="charity: water logo" class="nav-logo-img">
+      <img src="https://www.charitywater.org/_next/static/media/logo.2c489fc2.svg" alt="charity: water logo" class="nav-logo-img">
       Charity: Water
     </div>
     <div class="hamburger" onclick="toggleMenu()">
@@ -196,30 +201,13 @@
       <a href="#" class="hero-button" id="ctaBtn">BE THE CHANGE</a>
     </div>
   </section>
-  <!-- Checkmark and water drip animation (hidden by default) -->
-  <div class="checkmark-drip" id="checkmarkDrip">
-    <span class="checkmark">✔️</span>
-    <span class="water-drip">💧</span>
-  </div>
-  <!-- Simple script for hamburger menu and CTA animation -->
+  <!-- Simple script for hamburger menu -->
   <script>
     // Hamburger menu for mobile
     function toggleMenu() {
       var navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('show');
     }
-
-    // Show checkmark and water drip animation when hovering over CTA button
-    var ctaBtn = document.getElementById('ctaBtn');
-    var checkmarkDrip = document.getElementById('checkmarkDrip');
-    ctaBtn.addEventListener('mouseenter', function() {
-      // Add a class to body to show the animation
-      document.body.classList.add('show-checkmark');
-      // Remove the animation after 1.5 seconds
-      setTimeout(function() {
-        document.body.classList.remove('show-checkmark');
-      }, 1500);
-    });
   </script>
 </body>
 </html>
