@@ -6,12 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Charity Campaign Hero Banner</title>
   <style>
-    /* Use Proxima Nova if available, otherwise use a simple sans-serif font */
+    /* Set up brand colors as CSS variables for easy use */
+    :root {
+      --misty-gray: #CBCDD1;
+      --nature-green: #7BAE7F;
+      --soft-blue: #77ABBC;
+      --deep-navy: #003366;
+      --rich-black: #1A1A1A;
+      --bold-yellow: #FFC907;
+    }
+
+    /* Use a bold, modern sans-serif font for the whole page */
     body {
       font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+      background-color: var(--misty-gray); /* Light gray background */
+      color: var(--rich-black);            /* Dark text for readability */
       margin: 0;
       padding: 0;
-      background: hsl(0, 2%, 89%); /* white background helps logo stand out */
     }
 
     /* Logo at the top of the page */
@@ -19,7 +30,7 @@
       width: 100%;
       text-align: center; /* Center the logo */
       padding: 24px 0 12px 0; /* ample Space above and below */
-      background: lch(100% 0.01 296.81); /* white background for contrast */
+      background: #fff; /* white background for contrast */
     }
     .logo-img {
       width: 90vw;        /* Responsive width for most screens */
@@ -45,7 +56,7 @@
 
     /* Headline styles */
     .hero-title {
-      color: #FFC907;              /* Bold yellow */
+      color: var(--bold-yellow);              /* Bold yellow */
       font-size: 2.5em;            /* Large text */
       font-weight: bold;
       text-transform: uppercase;   /* All caps */
@@ -62,12 +73,12 @@
 
     /* CTA button styles */
     .hero-button {
-      background-color: #FFC907;   /* Yellow background */
-      color: #1a1a1a;              /* Black text */
+      background-color: var(--bold-yellow);   /* Yellow background */
+      color: var(--rich-black);              /* Black text */
       font-weight: bold;
       text-transform: uppercase;
       padding: 14px 32px;
-      border: 2px solid #1a1a1a;   /* Black border */
+      border: 2px solid var(--rich-black);   /* Black border */
       border-radius: 24px;         /* Pill shape */
       text-decoration: none;
       font-size: 1em;
@@ -79,8 +90,49 @@
       background-color: #e6b800;   /* Slightly darker yellow on hover */
     }
 
-    /* Responsive design for small screens */
+    /* Example: Style for a header section */
+    header {
+      background-color: var(--deep-navy);  /* Deep navy background */
+      color: var(--bold-yellow);           /* Bold yellow text */
+      text-align: center;
+      padding: 2em 1em;
+    }
+
+    /* Example: Style for a button */
+    .button {
+      background-color: var(--bold-yellow); /* Bright yellow button */
+      color: var(--rich-black);             /* Black text */
+      border: none;
+      border-radius: 24px;                  /* Pill shape */
+      padding: 1em 2em;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 1em 0;
+    }
+
+    /* Example: Section backgrounds */
+    .section-green {
+      background-color: var(--nature-green);
+      color: var(--rich-black);
+      padding: 2em 1em;
+    }
+
+    .section-blue {
+      background-color: var(--soft-blue);
+      color: var(--rich-black);
+      padding: 2em 1em;
+    }
+
+    /* Responsive design for mobile devices */
     @media (max-width: 600px) {
+      header, .section-green, .section-blue {
+        padding: 1em 0.5em;
+      }
+      .button {
+        width: 100%;
+        padding: 1em 0;
+      }
       .logo-container {
         padding: 20px 0 10px 0;
       }
