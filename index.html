@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charity Landing Page</title>
+  <title>Charity: Water Supporter</title>
   <!-- 
     We use a style block here for simplicity.
     You can move these styles to a separate style.css file if you want.
@@ -88,7 +88,7 @@
     /* Hero section styles */
     .hero {
       /* charity: water campaign photo from their site */
-      background-image: url('https://www.charitywater.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-image.8b6e2e7b.jpg&w=1920&q=75');
+      background-image: url('img/herophoto.png';
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -133,6 +133,35 @@
       /* No hover effect for simplicity */
     }
 
+    /* Header section styles */
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center; /* Center all content in the header */
+      padding: 30px 10px 40px 10px; /* Add space inside the header */
+    }
+    /* Style the logo image */
+    .logo {
+      width: 80px; /* Make the logo a good size for web */
+      height: auto; /* Keep the image ratio */
+      margin-bottom: 20px; /* Add space below the logo */
+    }
+
+    /* Style for the main title */
+    .main-title {
+      font-size: 2rem; /* Make the title readable */
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-family: serif;
+    }
+
+    /* Style for the supporter text */
+    .supporter-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
     /* Responsive styles for mobile devices */
     @media (max-width: 600px) {
       .nav-links {
@@ -169,6 +198,18 @@
         max-width: 90vw;
         padding: 12px 20px;
         font-size: 1em;
+      }
+      .logo {
+        width: 60px; /* Make the logo smaller on mobile */
+      }
+      .main-title {
+        font-size: 1.2rem;
+      }
+      .supporter-text {
+        font-size: 1rem;
+      }
+      header {
+        padding: 20px 5px 25px 5px;
       }
     }
   </style>
@@ -207,6 +248,17 @@
       <a href="#" class="hero-button">BE THE CHANGE</a>
     </div>
   </section>
+  <!-- Header section starts here -->
+  <header>
+    <!-- Logo image for charity: water -->
+    <!-- The image is placed at the top of the header -->
+    <img src="/workspaces/CR-02-charity-water-lp/img/charity-waterlogoblackrectangle.png.jpg" alt="Yellow water drop icon next to charity water in black text on a white rectangle, clean and hopeful logo design" class="logo">
+    <!-- Main title for the website -->
+    <div class="main-title">charity: water</div>
+    <!-- Supporter text below the title -->
+    <div class="supporter-text">SUPPORTER</div>
+  </header>
+  <!-- Header section ends here -->
   <!-- Simple script for hamburger menu -->
   <script>
     // Hamburger menu for mobile
