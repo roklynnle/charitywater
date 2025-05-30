@@ -99,18 +99,24 @@
       text-align: center;
       padding: 20px;
     }
-    .hero-title {
+    .hero-content {
+      /* Ensures text is readable regardless of background */
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .hero h1 {
       color: var(--bold-yellow);
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: bold;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       text-shadow: 2px 2px 6px #000;
     }
-    .hero-subtext {
+    .hero-subheadline {
       color: #fff;
-      font-size: 1.1em;
-      margin-bottom: 28px;
+      font-size: 1.2em;
+      margin-bottom: 24px;
     }
     .hero-button {
       background-color: var(--bold-yellow);
@@ -150,8 +156,8 @@
       .hamburger {
         display: flex; /* Show hamburger on small screens */
       }
-      .hero-title {
-        font-size: 1.2em;
+      .hero h1 {
+        font-size: 1.5em;
       }
       .hero {
         min-height: 40vh;
@@ -170,9 +176,8 @@
 <body>
   <!-- Logo banner at the top -->
   <div class="logo-container">
-    <!-- Official charity: water logo from their CDN -->
-    <img src="https://www.charitywater.org/_next/static/media/logo.2c489fc2.svg" alt="charity: water logo" class="nav-logo-img">
-    Charity: Water
+    <!-- Changed logo image to the new file name -->
+    <img src="squareblackcharitywater.png.jpg" alt="Charity Water Logo" class="logo">
   </div>
   <!-- Navigation bar with hamburger menu -->
   <nav>
@@ -193,12 +198,12 @@
   </nav>
   <!-- Hero section -->
   <section class="hero">
-    <div>
-      <h1 class="hero-title">YOU CAN’T FIX EVERYTHING. BUT THIS? YOU CAN.</h1>
-      <p class="hero-subtext">
+    <div class="hero-content">
+      <h1>YOU CAN’T FIX EVERYTHING.<br>BUT THIS? YOU CAN.</h1>
+      <p class="hero-subheadline">
         785 million people don’t have access to clean water. You can help change that today.
       </p>
-      <a href="#" class="hero-button" id="ctaBtn">BE THE CHANGE</a>
+      <a href="#" class="hero-button">BE THE CHANGE</a>
     </div>
   </section>
   <!-- Simple script for hamburger menu -->
