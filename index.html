@@ -1,70 +1,225 @@
-/* Beginner-friendly CSS using your brand color palette and a bold, modern font */
+<!-- Beginner-friendly landing page with logo, navigation, and hero section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Landing Page</title>
+  <style>
+    /* Define brand colors as variables for easy use */
+    :root {
+      --misty-gray: #CBCDD1;
+      --nature-green: #7BAE7F;
+      --soft-blue: #77ABBC;
+      --deep-navy: #003366;
+      --rich-black: #1A1A1A;
+      --bold-yellow: #FFC907;
+    }
 
-/* Set up brand colors as CSS variables for easy use */
-:root {
-  --misty-gray: #CBCDD1;
-  --nature-green: #7BAE7F;
-  --soft-blue: #77ABBC;
-  --deep-navy: #003366;
-  --rich-black: #1A1A1A;
-  --bold-yellow: #FFC907;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif; /* Simple, readable font */
+      background: var(--misty-gray);
+      color: var(--rich-black);
+      margin: 0;
+      padding: 0;
+    }
 
-/* Use a bold, modern sans-serif font for the whole page */
-body {
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  background-color: var(--misty-gray); /* Light gray background */
-  color: var(--rich-black);            /* Dark text for readability */
-  margin: 0;
-  padding: 0;
-}
+    /* Logo banner at the top */
+    .logo-container {
+      text-align: center;
+      padding: 24px 0 12px 0;
+      background: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .nav-logo-img {
+      height: 32px;
+      width: auto;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
 
-/* Example: Style for a header section */
-header {
-  background-color: var(--deep-navy);  /* Deep navy background */
-  color: var(--bold-yellow);           /* Bold yellow text */
-  text-align: center;
-  padding: 2em 1em;
-}
+    /* Navigation bar styles */
+    nav {
+      background: var(--deep-navy);
+      color: #fff;
+      padding: 0.5em 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* Hamburger menu for mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 1em;
+    }
+    .hamburger span {
+      height: 4px;
+      width: 25px;
+      background: #fff;
+      margin: 3px 0;
+      border-radius: 2px;
+      display: block;
+    }
 
-/* Example: Style for a button */
-.button {
-  background-color: var(--bold-yellow); /* Bright yellow button */
-  color: var(--rich-black);             /* Black text */
-  border: none;
-  border-radius: 24px;                  /* Pill shape */
-  padding: 1em 2em;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 1em 0;
-}
+    /* Hero section styles */
+    .hero {
+      background-image: url('images/herophoto.png'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-title {
+      color: var(--bold-yellow);
+      font-size: 2em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      text-shadow: 2px 2px 6px #000;
+    }
+    .hero-subtext {
+      color: #fff;
+      font-size: 1.1em;
+      margin-bottom: 28px;
+    }
+    .hero-button {
+      background-color: var(--bold-yellow);
+      color: var(--rich-black);
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 2px solid var(--rich-black);
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 1em;
+      cursor: pointer;
+      display: inline-block;
+      /* No hover effect for simplicity */
+    }
 
-/* Example: Section backgrounds */
-.section-green {
-  background-color: var(--nature-green);
-  color: var(--rich-black);
-  padding: 2em 1em;
-}
+    /* Responsive styles for mobile devices */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none; /* Hide nav links on small screens */
+        flex-direction: column;
+        background: var(--deep-navy);
+        position: absolute;
+        top: 56px;
+        right: 10px;
+        width: 150px;
+      }
+      .nav-links.show {
+        display: flex; /* Show nav links when menu is open */
+      }
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        border-top: 1px solid #fff2;
+      }
+      .hamburger {
+        display: flex; /* Show hamburger on small screens */
+      }
+      .hero-title {
+        font-size: 1.2em;
+      }
+      .hero {
+        min-height: 40vh;
+        padding: 10px;
+      }
+      .hero-button {
+        width: auto; /* Button is only as wide as its text */
+        min-width: 120px;
+        max-width: 90vw;
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo banner at the top -->
+  <div class="logo-container">
+    <!-- Logo image and site name -->
+    <img src="images/cw_logo.png" alt="charity: water logo" class="nav-logo-img">
+    Charity: Water
+  </div>
+  <!-- Navigation bar with hamburger menu -->
+  <nav>
+    <div class="nav-brand">
+      <img src="images/cw_logo.png" alt="charity: water logo" class="nav-logo-img">
+      Charity: Water
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Story</a></li>
+      <li><a href="#">Donate</a></li>
+    </ul>
+  </nav>
+  <!-- Hero section -->
+  <section class="hero">
+    <div>
+      <h1 class="hero-title">YOU CAN’T FIX EVERYTHING. BUT THIS? YOU CAN.</h1>
+      <p class="hero-subtext">
+        785 million people don’t have access to clean water. You can help change that today.
+      </p>
+      <a href="#" class="hero-button" id="ctaBtn">BE THE CHANGE</a>
+    </div>
+  </section>
+  <!-- Checkmark and water drip animation (hidden by default) -->
+  <div class="checkmark-drip" id="checkmarkDrip">
+    <span class="checkmark">✔️</span>
+    <span class="water-drip">💧</span>
+  </div>
+  <!-- Simple script for hamburger menu and CTA animation -->
+  <script>
+    // Hamburger menu for mobile
+    function toggleMenu() {
+      var navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
 
-.section-blue {
-  background-color: var(--soft-blue);
-  color: var(--rich-black);
-  padding: 2em 1em;
-}
-
-/* Responsive design for mobile devices */
-@media (max-width: 600px) {
-  header, .section-green, .section-blue {
-    padding: 1em 0.5em;
-  }
-  .button {
-    width: 100%;
-    padding: 1em 0;
-  }
-}
-
-/* 
-  We use @media (max-width: 600px) to make the page look good on phones.
-  This changes padding and button width so everything fits on small screens.
-*/
+    // Show checkmark and water drip animation when hovering over CTA button
+    var ctaBtn = document.getElementById('ctaBtn');
+    var checkmarkDrip = document.getElementById('checkmarkDrip');
+    ctaBtn.addEventListener('mouseenter', function() {
+      // Add a class to body to show the animation
+      document.body.classList.add('show-checkmark');
+      // Remove the animation after 1.5 seconds
+      setTimeout(function() {
+        document.body.classList.remove('show-checkmark');
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
