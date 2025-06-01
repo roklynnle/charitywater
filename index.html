@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+
+</html><!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Add your HTML here -->
 </body>
 </html>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      background-color: #ffffff;
+      background-color: #fff7e1;
     }
 
     header {
@@ -71,11 +71,14 @@
     }
 
     .message {
-      /* This creates a steeper, sharp diagonal line between blue and white */
-      background: linear-gradient(165deg, #092c57 55%, #ffffff 55%);
+      /* This creates a diagonal blue background with a sharp line */
+      background: linear-gradient(160deg, #092c57 75%, #ffffff 75%);
       color: #fff;
       text-align: center;
-      padding: 40px 20px;
+      padding-top: 30px;    /* Less space at the top */
+      padding-bottom: 80px; /* More space at the bottom to push text up */
+      padding-left: 30px;
+      padding-right: 20px;
     }
 
     .message h1 {
@@ -84,19 +87,44 @@
     }
 
     .message p {
-      font-size: 1rem;
-      margin-bottom: 30px;
+      text-align: left;     /* This centers the paragraph text */
+      font-size: 1.3rem;      /* This makes the text a little bigger */
+      margin-bottom: 35px;    /* Keeps some space below the paragraph */
     }
 
     .cta-button {
       background-color: #fdd835;
       color: #000;
-      padding: 12px 24px;
+      padding: 30px 30px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
     }
+
+    /* This moves the button to the right side */
+    .cta-right {
+      text-align: center;         /* Moves the button to the right */
+      margin-top: 30px;          /* Adds space above the button */
+      margin-right: 30px;        /* Adds space from the edge for better look */
+      max-width: 350px;          /* Limits how far right the button can go */
+      margin-left: auto;         /* Centers the box if there's room */
+    }.cta-button {
+  background-color: #2c7a7b;
+  color: #77a8bb;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 
     @media (max-width: 768px) {
       .hero-images img {
@@ -122,10 +150,120 @@
 
   <section class="message">
     <h1>Your support transforms polluted water into clean, safe water!</h1>
-    <p>Give communities the opportunity to thrive!<br/>
-       Join the movement to end water scarcity and make an impact!</p>
-    <button class="cta-button">Be apart of a campus chapter!</button>
+    <p> Give communities the opportunity to thrive!<br/>
+      Join the movement to end water scarcity and make an impact!</p>
+    <!-- Wrapper div to help move the button right -->
+    <div class="cta-right">
+      <button class="cta-button">Be apart of a campus chapter!</button>
+    </div>
   </section>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>charity: water Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #fff7e1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background-color: #fff7e1;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #0077cc;
+    }
+
+    .give-button {
+      background-color: #fdd835;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.2rem;      /* Makes the button text a bit larger */
+      cursor: pointer;
+      transition: transform 0.2s; /* Smooth movement when hovered */
+    }
+
+    /* This makes the button move up a little when you hover over it */
+    .give-button:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero-images {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .hero-images img {
+      width: 100%;    /* The image will stretch to fill the width of its container */
+      height: auto;   /* This keeps the image shape correct (not squished) */
+      display: block; /* Removes small gaps below the image */
+    }
+
+    .message {
+      /* This creates a diagonal blue background with a sharp line */
+      background: linear-gradient(160deg, #092c57 75%, #fff7e1 75%);
+      color: #fff7e1;
+      text-align: left;
+      padding-top: 20px;    /* Less space at the top */
+      padding-bottom: 20px; /* More space at the bottom to push text up */
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .message h1 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    .message p {
+      text-align: left;     /* This centers the paragraph text */
+      font-size: 1.8rem;      /* This makes the text a little bigger */
+      margin-bottom: 50px;    /* Keeps some space below the paragraph */
+    }
+
+    .cta-button {
+      background-color: #fdd835;
+      color: #000;
+      padding: 20px 29px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.3rem;         /* Makes the button text even bigger */
+      cursor: pointer;
+      transition: transform 0.2s; /* Smooth movement when hovered */
+    }
+
+    /* This makes the button move up a little when you hover over it */
+    .cta-button:hover {
+      transform: translateY(-5px); /* Moves the button up slightly */
+    }
+
+    /* This moves the button to the right side */
+    .cta-right {
+      text-align: right;         /* Moves the button to the right */
+      margin-top: 30px;          /* Adds space above the button */
+      margin-right: 100px;        /* Adds space from the edge for better look */
+      max-width: 250px;          /* Makes the button box less wide, moving it left */
+      margin-left: auto;         /* Centers the box if there's room */
+    }
