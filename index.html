@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charity: water – Student Campaign</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Make the story image smaller and centered */
+    .story-img {
+      display: block;           /* Makes centering work */
+      margin: 0 auto 16px auto; /* Centers image and adds space below */
+      width: 200px;             /* Sets a smaller width */
+      height: auto;             /* Keeps the image's aspect ratio */
+      border-radius: 10px;      /* Slightly rounded corners */
+    }
+
+    /* Make all gallery images the same size and shape */
+    .gallery-item img {
+      width: 200px;             /* Sets a fixed width */
+      height: 150px;            /* Sets a fixed height */
+      object-fit: cover;        /* Crops image to fill the box */
+      border-radius: 10px;      /* Rounded corners for all images */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Soft shadow */
+      display: block;           /* Removes extra space below image */
+      margin: 0 auto;           /* Centers image in its box */
+    }
+  </style>
 </head>
 <body>
-    <!-- Add your HTML here -->
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Real Change Starts with You</h1>
+      <p>Fund clean water for communities hit hardest by climate change — 100% of your donation goes to the front lines.</p>
+      <a href="#donate" class="cta-button">Donate Now</a>
+    </div>
+  </header>
+
+  <section class="story">
+    <img src="img/story-image.jpg" alt="Clean water project" class="story-img">
+    <p>Clean water changes everything. It helps prevent disease, keeps girls in school, and gives communities hope and health.</p>
+    <p>Your donation goes directly to building water systems in places that need it most.</p>
+  </section>
+
+  <section class="gallery">
+    <h2>See the Impact</h2>
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="img/impact1.jpg" alt="Water well being built">
+      </div>
+      <div class="gallery-item">
+        <img src="img/impact2.jpg" alt="Young girl smiling">
+      </div>
+      <div class="gallery-item">
+        <img src="img/impact3.jpg" alt="Girl drinking water at home">
+      </div>
+    </div>
+  </section>
+
+  <section class="call-to-action">
+    <h2>Be Part of the Change</h2>
+    <p>Join students around the world taking action to end the water crisis. Your voice and contribution matter.</p>
+    <a href="#donate" class="cta-button">Donate Now</a>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 charity: water Student Campaign. Made with heart and hope for change.</p>
+  </footer>
+
 </body>
 </html>

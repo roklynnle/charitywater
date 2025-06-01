@@ -1,0 +1,168 @@
+/* Color variables for easy theme changes */
+:root {
+  --yellow: #ffc907;
+  --navy: #003366;
+  --peach: #fed8c1;
+  --gray: #cbcdd1;
+  --text-dark: #111;
+}
+
+/* Basic body styles */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-dark);
+  background-color: white;
+  line-height: 1.6;
+}
+
+/* Headings use a special font */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 1rem;
+}
+
+/* Hero section styles */
+.hero {
+  background: url('img/hero-image.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Button style */
+.cta-button {
+  background-color: var(--yellow);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Story section styles */
+.story {
+  background-color: var(--peach);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Make the story image wide and centered */
+.story-img {
+  display: block;           /* Center the image */
+  margin: 0 auto 16px auto; /* Center and add space below */
+  width: 320px;             /* Wide image */
+  height: auto;             /* Keep aspect ratio */
+  border-radius: 10px;      /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 3px solid var(--yellow); /* Highlight border */
+  background: white;        /* White background */
+  padding: 4px;             /* Padding inside border */
+}
+
+/* Make the first story sentence pop */
+.story p:first-of-type {
+  font-weight: bold;
+  color: var(--navy);
+  font-size: 1.2rem;
+  background: var(--yellow);
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Story heading style */
+.story h2 {
+  color: var(--navy);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+/* Clear floats if used */
+.story::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Gallery section styles */
+.gallery {
+  background-color: var(--gray);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: var(--navy);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Gallery row uses flexbox to line up images in a row */
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Each gallery item is a box for an image */
+.gallery-item {
+  flex: 1 1 250px;
+  max-width: 250px;
+}
+
+/* All gallery images are the same size and shape */
+.gallery-item img {
+  width: 200px;             /* Fixed width for all images */
+  height: 150px;            /* Fixed height for all images */
+  object-fit: cover;        /* Crop image to fill the box */
+  border-radius: 10px;      /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  display: block;           /* Remove extra space below image */
+  margin: 0 auto;           /* Center image in its box */
+}
+
+/* Show more of the top part of the "Young girl smiling" image */
+.gallery-item img[alt="Young girl smiling"] {
+  object-position: top; /* Move image up to show more of her face */
+}
+
+/* Call to action section */
+.call-to-action {
+  background-color: var(--navy);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Footer styles */
+.site-footer {
+  background-color: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* In your index.html, update the story section like this:
+<section class="story">
+  ...
+</section>
+*/
