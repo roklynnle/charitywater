@@ -10,3 +10,122 @@
     <!-- Add your HTML here -->
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>charity: water Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background-color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #0077cc;
+    }
+
+    .give-button {
+      background-color: #fdd835;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.2rem;      /* Makes the button text a bit larger */
+      cursor: pointer;
+      transition: transform 0.2s; /* Smooth movement when hovered */
+    }
+
+    /* This makes the button move up a little when you hover over it */
+    .give-button:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero-images {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .hero-images img {
+      width: 100%;    /* The image will stretch to fill the width of its container */
+      height: auto;   /* This keeps the image shape correct (not squished) */
+      display: block; /* Removes small gaps below the image */
+    }
+
+    .message {
+      /* This creates a steeper, sharp diagonal line between blue and white */
+      background: linear-gradient(165deg, #092c57 55%, #ffffff 55%);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .message h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .message p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: #fdd835;
+      color: #000;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hero-images img {
+        max-width: 50%;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo image on the left -->
+    <img src="img/cw_logo-2.png" alt="Charity Water Logo" class="logo-img">
+    <div class="logo"> <span></span></div>
+    <button class="give-button">GIVE 💧</button>
+  </header>
+
+  <section class="hero-images">
+    <!-- This shows your main hero image from the img folder -->
+    <img src="img/Hero image.png" alt="Main hero image showing clean water" />
+  </section>
+
+  <section class="message">
+    <h1>Your support transforms polluted water into clean, safe water!</h1>
+    <p>Give communities the opportunity to thrive!<br/>
+       Join the movement to end water scarcity and make an impact!</p>
+    <button class="cta-button">Be apart of a campus chapter!</button>
+  </section>
+
+</body>
+</html>
