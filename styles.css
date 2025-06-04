@@ -1,19 +1,90 @@
-/* charity: water Brand Colors & Fonts
+/* Hero Section Styles for a full-width background image and bold, readable text */
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+/* The .hero section uses a background image and centers its content */
+.hero {
+  /* Use your own image file for the background */
+  background-image: url('herophoto.png');
+  background-size: cover;      /* Make the image cover the whole section */
+  background-position: center; /* Center the image */
+  color: #FFC907;              /* Yellow for main headline */
+  text-align: center;          /* Center all text */
+  padding: 60px 20px 80px 20px;/* Top, right, bottom, left padding */
+  position: relative;          /* Needed for overlay effect */
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+/* Add a dark overlay for better text contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  z-index: 1;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+/* Content sits above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-*/
+/* Headline styles */
+.hero h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase; /* All Caps */
+  margin: 20px 0 16px 0;
+  color: #FFC907;            /* Yellow accent */
+  line-height: 1.1;
+}
+
+/* Subheadline styles */
+.hero-subheadline {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+/* Call-to-action button styles */
+.hero-button {
+  display: inline-block;
+  background-color: #FFC907; /* Yellow */
+  color: #003366;            /* Navy Blue text */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border: 3px solid #1A1A1A; /* Charcoal Black border */
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #fff;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 600px) {
+  /* Make hero section have less padding on small screens */
+  .hero {
+    padding: 30px 5px 40px 5px;
+  }
+  /* Make the headline smaller on small screens */
+  .hero h1 {
+    font-size: 1.3em;
+  }
+  /* Make the hero content fit better on small screens */
+  .hero-content {
+    max-width: 95%;
+  }
+  /* Make the button fill the width of the screen on small devices */
+  .hero-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1em;
+  }
+}

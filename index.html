@@ -1,12 +1,271 @@
+<!-- Beginner-friendly landing page with logo, navigation, and hero section -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water Supporter</title>
+  <!-- 
+    We use a style block here for simplicity.
+    You can move these styles to a separate style.css file if you want.
+  -->
+  <style>
+    /* Define brand colors as variables for easy use */
+    :root {
+      --misty-gray: #CBCDD1;
+      --nature-green: #7BAE7F;
+      --soft-blue: #77ABBC;
+      --deep-navy: #003366;
+      --rich-black: #1A1A1A;
+      --bold-yellow: #FFC907;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif; /* Simple, readable font */
+      background: var(--misty-gray);
+      color: var(--rich-black);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Logo banner at the top */
+    .logo-container {
+      text-align: center;
+      padding: 24px 0 12px 0;
+      background: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .nav-logo-img {
+      height: 40px;
+      width: auto;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Navigation bar styles */
+    nav {
+      background: var(--deep-navy);
+      color: #fff;
+      padding: 0.5em 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* Hamburger menu for mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 1em;
+    }
+    .hamburger span {
+      height: 4px;
+      width: 25px;
+      background: #fff;
+      margin: 3px 0;
+      border-radius: 2px;
+      display: block;
+    }
+
+    /* Hero section styles */
+    .hero {
+      /* charity: water campaign photo from their site */
+      background-image: url('img/herophoto.png';
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-content {
+      /* Ensures text is readable regardless of background */
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .hero h1 {
+      color: var(--bold-yellow);
+      font-size: 2.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 6px #000;
+    }
+    .hero-subheadline {
+      color: #fff;
+      font-size: 1.2em;
+      margin-bottom: 24px;
+    }
+    .hero-button {
+      background-color: var(--bold-yellow);
+      color: var(--rich-black);
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 2px solid var(--rich-black);
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 1em;
+      cursor: pointer;
+      display: inline-block;
+      /* No hover effect for simplicity */
+    }
+
+    /* Header section styles */
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center; /* Center all content in the header */
+      padding: 30px 10px 40px 10px; /* Add space inside the header */
+    }
+    /* Style the logo image */
+    .logo {
+      width: 80px; /* Make the logo a good size for web */
+      height: auto; /* Keep the image ratio */
+      margin-bottom: 20px; /* Add space below the logo */
+    }
+
+    /* Style for the main title */
+    .main-title {
+      font-size: 2rem; /* Make the title readable */
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-family: serif;
+    }
+
+    /* Style for the supporter text */
+    .supporter-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* Responsive styles for mobile devices */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none; /* Hide nav links on small screens */
+        flex-direction: column;
+        background: var(--deep-navy);
+        position: absolute;
+        top: 56px;
+        right: 10px;
+        width: 150px;
+      }
+      .nav-links.show {
+        display: flex; /* Show nav links when menu is open */
+      }
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        border-top: 1px solid #fff2;
+      }
+      .hamburger {
+        display: flex; /* Show hamburger on small screens */
+      }
+      .hero h1 {
+        font-size: 1.5em;
+      }
+      .hero {
+        min-height: 40vh;
+        padding: 10px;
+      }
+      .hero-button {
+        width: auto; /* Button is only as wide as its text */
+        min-width: 120px;
+        max-width: 90vw;
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+      .logo {
+        width: 60px; /* Make the logo smaller on mobile */
+      }
+      .main-title {
+        font-size: 1.2rem;
+      }
+      .supporter-text {
+        font-size: 1rem;
+      }
+      header {
+        padding: 20px 5px 25px 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Add your HTML here -->
+  <!-- Logo banner at the top -->
+  <div class="logo-container">
+    <!-- Changed logo image to the new file name -->
+    <!-- Logo for charity: water, shows a yellow water drop icon next to the words charity water in black text, set on a white rectangular background, simple and hopeful design -->
+    <img src="/workspaces/CR-02-charity-water-lp/img/charity-waterlogoblackrectangle.png.jpg" class="logo" alt="Yellow water drop icon next to charity water in black text on a white rectangle, clean and hopeful logo design">
+  </div>
+  <!-- Navigation bar with hamburger menu -->
+  <nav>
+    <div class="nav-brand">
+      <img src="https://www.charitywater.org/_next/static/media/logo.2c489fc2.svg" alt="charity: water logo" class="nav-logo-img">
+      Charity: Water
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Story</a></li>
+      <li><a href="#">Donate</a></li>
+    </ul>
+  </nav>
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>YOU CAN’T FIX EVERYTHING.<br>BUT THIS? YOU CAN.</h1>
+      <p class="hero-subheadline">
+        785 million people don’t have access to clean water. You can help change that today.
+      </p>
+      <a href="#" class="hero-button">BE THE CHANGE</a>
+    </div>
+  </section>
+  <!-- Header section starts here -->
+  <header>
+    <!-- Logo image for charity: water -->
+    <!-- The image is placed at the top of the header -->
+    <img src="/workspaces/CR-02-charity-water-lp/img/charity-waterlogoblackrectangle.png.jpg" alt="Yellow water drop icon next to charity water in black text on a white rectangle, clean and hopeful logo design" class="logo">
+    <!-- Main title for the website -->
+    <div class="main-title">charity: water</div>
+    <!-- Supporter text below the title -->
+    <div class="supporter-text">SUPPORTER</div>
+  </header>
+  <!-- Header section ends here -->
+  <!-- Simple script for hamburger menu -->
+  <script>
+    // Hamburger menu for mobile
+    function toggleMenu() {
+      var navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
