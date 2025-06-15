@@ -204,3 +204,14 @@ footer {
     font-size: 2.8rem;
   }
 }
+.hide-mobile {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+
