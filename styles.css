@@ -5,13 +5,19 @@ body {
   color: #222;
 }
 
+/* Container centers all content and limits width */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .background-image {
   position: absolute;
   display: block;
-  width: 100vw;
-  height: auto;
-  margin:0;
-  padding:0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   object-fit: cover;
   z-index: -1;
 }
@@ -73,6 +79,12 @@ main {
   text-align: left;
 }
 
+/* Hero text stands out against the background */
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
 h1 {
   text-align: left;
   display:inline-block;
@@ -104,6 +116,18 @@ p {
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-section {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
 }
 
 .search-bar input {
@@ -113,6 +137,13 @@ p {
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-bottom: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .project-box {

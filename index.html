@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Decorative background image to add visual interest -->
   <img src="img/background.jpg" alt="Water Background" class="background-image">
 
   <header>
@@ -18,42 +19,56 @@
     <button class="give-btn">GIVE</button>
   </header>
 
-  <main>
-    <h1>Make Waves, Change Lives with Charity Water!</h1>
-    <p>
-      Embrace the moral, our vision of generosity. It's not about giving too much or too little, but giving what feels right to you. 
-      Your contribution, no matter the size, helps bring lasting change. Join us and transform lives one drop at a time.
-    </p>
-    <button class="join-btn">JOIN TODAY</button>
+  <main class="container">
+    <!-- Hero section with a short message and join button -->
+    <section class="hero">
+      <h1>Make Waves, Change Lives with Charity Water!</h1>
+      <p>
+        Embrace the moral, our vision of generosity. It's not about giving too much or too little, but giving what feels right to you.
+        Your contribution, no matter the size, helps bring lasting change. Join us and transform lives one drop at a time.
+      </p>
+      <button class="join-btn">JOIN TODAY</button>
+    </section>
 
-    <div class="search-bar">
-      <input type="text" placeholder="Search Projects or Countries">
-    </div>
+    <!-- Simple search bar to look up projects -->
+    <section class="search-section">
+      <div class="search-bar">
+        <input type="text" placeholder="Search Projects or Countries">
+      </div>
+    </section>
 
-    <div class="project-box">
-      <div class="project">
-        <div class="project-title">
-          <img src="https://flagcdn.com/w40/zw.png" alt="Zimbabwe Flag">
-          Zimbabwe
+    <!-- List of active projects -->
+    <section class="project-section">
+      <div class="project-box">
+        <div class="project">
+          <div class="project-title">
+            <img src="https://flagcdn.com/w40/zw.png" alt="Zimbabwe Flag">
+            Zimbabwe
+          </div>
+          <span>14,520 served</span>
         </div>
-        <span>14,520 served</span>
-      </div>
-      <div class="project">
-        <div class="project-title">
-          <img src="https://flagcdn.com/w40/rw.png" alt="Rwanda Flag">
-          Rwanda
+        <div class="project">
+          <div class="project-title">
+            <img src="https://flagcdn.com/w40/rw.png" alt="Rwanda Flag">
+            Rwanda
+          </div>
+          <span>38,296 served</span>
         </div>
-        <span>38,296 served</span>
-      </div>
-      <div class="project">
-        <div class="project-title">
-          <img src="https://flagcdn.com/w40/ug.png" alt="Uganda Flag">
-          Uganda
+        <div class="project">
+          <div class="project-title">
+            <img src="https://flagcdn.com/w40/ug.png" alt="Uganda Flag">
+            Uganda
+          </div>
+          <span>60,676 served</span>
         </div>
-        <span>60,676 served</span>
+        <div class="see-all">See All</div>
       </div>
-      <div class="see-all">See All</div>
-    </div>
+    </section>
   </main>
+
+  <!-- Simple footer for a finished feel -->
+  <footer>
+    &copy; 2024 charity: water
+  </footer>
 </body>
 </html>
