@@ -17,12 +17,30 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #7AA5B6;
-  padding: 1rem 2rem;
-  color: white;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.give-btn {
+  background-color: #FFD000;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -38,15 +56,14 @@ header {
   margin-right: 10px;
 }
 
-.give-btn {
-  background-color: #FFD000;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
-  color: black;
-  cursor: pointer;
-  border-radius: 8px;
-}
+
+
+.content {
+  margin-top: 80px;
+  padding: 2rem 1rem;
+  color: #222;
+  background-color: #fefefe;
+    }
 
 main {
   padding: 2rem 1rem;
