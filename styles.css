@@ -33,7 +33,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #7AA5B6;
+  background-color: #2E9DF7;
   padding: 1rem 1.5rem;
   box-sizing: border-box;
 }
@@ -106,7 +106,7 @@ h1 {
   margin-right: auto;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  color: #003049;
+  color: #FFC907;
 }
 
 p {
@@ -115,10 +115,12 @@ p {
   margin-right: auto;
   max-width: 600px;
   margin-bottom: 1.5rem;
+  color:#FF902A;
+  font-family: ProximaNova, sans-serif;
 }
 
 .join-btn {
-  background-color: #FFD000;
+  background-color: #FFC907;
   color: black;
   padding: 0.8rem 1.6rem;
   font-size: 1rem;
@@ -154,7 +156,7 @@ footer {
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
-  color: #555;
+  color: #2E9DF7;
 }
 
 .project-box {
@@ -164,6 +166,9 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 320px;
   width: 100%;
+  position: relative;
+  right: -600px;
+  top: -80px;
 }
 
 .project {
