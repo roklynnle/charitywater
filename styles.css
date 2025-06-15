@@ -50,6 +50,16 @@ header {
   flex-shrink: 0;
 }
 
+.give-container {
+  display: flex;
+  align-items: center;
+}
+
+.give-icon {
+  height: 50px;
+  margin-left: 0.5rem;
+}
+
 .logo {
   display: flex;
   align-items: center;
