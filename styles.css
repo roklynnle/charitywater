@@ -141,3 +141,15 @@ nav a {
     margin: 10px;
   }
 }
+
+/* 
+  Use Montserrat (similar to Proxima Nova) for most text.
+  Use Nunito (similar to Avenir) for headings.
+*/
+body, p, a {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', Arial, sans-serif;
+}
