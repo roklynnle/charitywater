@@ -103,5 +103,84 @@
   </div>
   <p style="margin-top: 0.5rem; color: #ccc;">&copy; 2025 Charity:Water Student Initiative</p>
 </footer>
+<!-- Mute Button -->
+<button id="muteToggle" style="animation: pulseGlow 1s infinite alternate; position: fixed; bottom: 20px; left: 20px; z-index: 999; padding: 0.5rem 1rem; background-color: #ff408000; color: white; border: none; border-radius: 6px; cursor: pointer;">🔇</button>
+<audio id="rainAudio" loop autoplay>
+  <source src="https://www.soundjay.com/nature/rain-01.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Rain Button and Script -->
+<button id="rainToggle" style="animation: bounceGlow 1s infinite alternate; position: fixed; bottom: 20px; right: 20px; z-index: 999; padding: 0.5rem 1rem; background-color: #0077cc00; color: white; border: none; border-radius: 6px; cursor: pointer;">💧</button>
+<canvas id="rainCanvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 998;"></canvas>
+<script>
+  window.addEventListener('load', () => {
+    raindrops = Array.from({ length: 150 }, createRaindrop);
+    drawRain();
+  });
+  const canvas = document.getElementById('rainCanvas');
+  const ctx = canvas.getContext('2d');
+  let raindrops = [];
+  let isRaining = true;
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  function createRaindrop() {
+    return {
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      length: Math.random() * 25 + 15,
+      speed: Math.random() * 4 + 2
+    };
+  }
+
+  function drawRain() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = 'rgba(0, 123, 255, 0.5)';
+    ctx.lineWidth = 2;
+    for (let drop of raindrops) {
+      ctx.beginPath();
+      ctx.moveTo(drop.x, drop.y);
+      ctx.lineTo(drop.x, drop.y + drop.length);
+      ctx.stroke();
+    }
+    updateRain();
+    if (isRaining) requestAnimationFrame(drawRain);
+  }
+
+  function updateRain() {
+    for (let drop of raindrops) {
+      drop.y += drop.speed;
+      if (drop.y > canvas.height) {
+        drop.x = Math.random() * canvas.width;
+        drop.y = 0;
+      }
+    }
+  }
+
+  document.getElementById('rainToggle').addEventListener('click', () => {
+    isRaining = !isRaining;
+    if (isRaining) {
+      raindrops = Array.from({ length: 150 }, createRaindrop);
+      drawRain();
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  });
+  const rainAudio = document.getElementById('rainAudio');
+  const muteToggle = document.getElementById('muteToggle');
+  let isMuted = false;
+
+  muteToggle.addEventListener('click', () => {
+    isMuted = !isMuted;
+    rainAudio.muted = isMuted;
+    muteToggle.textContent = isMuted ? '🔇' : '🔊';
+  });
+</script>
 </body>
 </html>
