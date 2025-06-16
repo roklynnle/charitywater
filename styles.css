@@ -100,8 +100,6 @@ nav a {
 
 .donate-button:hover {
   background-color: #0d182e;
-}
-
 /* Reset + Base */
 * {
   box-sizing: border-box;
@@ -212,25 +210,4 @@ nav a {
   display: inline-block;
   letter-spacing: 2px;
   text-align: center;
-}
-
-/* Make the image responsive */
-.left-image img {
-    width: 100%;      /* Image fills the width of its container */
-    height: auto;     /* Keep the image aspect ratio */
-    display: block;   /* Remove small gaps below the image */
-    border-radius: 8px; /* Optional: rounded corners for a friendly look */
-}
-
-/* Main section styling */
-.main-section {
-    float: left;    /* Place main section to the right of the image */
-    width: 55%;     /* Take up the remaining space */
-}
-
-/* Clear floats after the container (for older browsers) */
-.container::after {
-    content: "";
-    display: table;
-    clear: both;
 }
