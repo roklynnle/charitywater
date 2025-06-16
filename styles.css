@@ -30,7 +30,7 @@ header {
   color: #666;
 }
 
-nav a::highlight {
+nav a:host-context
   margin-left: 20px;
   text-decoration: none;
   color: #222;
