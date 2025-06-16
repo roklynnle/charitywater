@@ -228,4 +228,37 @@ nav a {
   border-radius: 50px;
   display: inline-block;
   letter-spacing: 2px;
-  text-align: center
+  text-align: center;
+}
+
+/* Container for image and main content */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* Left side: Image */
+.left-image {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.left-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right side: Main content */
+.main-section {
+  flex: 2;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
