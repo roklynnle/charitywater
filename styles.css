@@ -238,6 +238,10 @@ nav a {
   justify-content: center;
   align-items: flex-start;
   margin-top: 40px;
+  /* Clear floats after the container */
+  overflow: auto;
+  /* Add some margin for better appearance */
+  margin: 20px;
 }
 
 /* Left side: Image */
@@ -245,20 +249,14 @@ nav a {
   flex: 1;
   min-width: 300px;
   margin-right: 20px;
+  float: left; /* Place image to the left */
+  width: 40%;  /* Take up 40% of the container */
+  margin-right: 20px; /* Space between image and main section */
 }
 
 .left-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-
-/* Right side: Main content */
-.main-section {
-  flex: 2;
-  min-width: 300px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Make the image responsive */
 }
