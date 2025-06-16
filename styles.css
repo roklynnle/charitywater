@@ -30,7 +30,7 @@ header {
   color: #666;
 }
 
-nav a:host-context
+nav a:hover {
   margin-left: 20px;
   text-decoration: none;
   color: #222;
