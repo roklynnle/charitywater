@@ -31,7 +31,7 @@ header {
 }
 
 nav a:hover {
-  margin-left: 20px;
+  margin-right: 20px;
   text-decoration: none;
   color: #222;
   font-weight: bold;
