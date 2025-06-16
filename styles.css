@@ -159,6 +159,7 @@ footer {
   color: #77ABBB;
 }
 
+
 .project-box {
   background-color: #fff7E1;
   padding: 1.5rem;
@@ -195,7 +196,7 @@ footer {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   main {
     padding: 4rem;
   }
@@ -205,16 +206,86 @@ footer {
   }
 }
 .hide-mobile {
-  display: block;
-}
-.project-box{
   display: none;
-}
+}*/
 
-@media screen and (max-width: 768px) {
-  .hide-mobile {
+
+
+  @media screen and (max-width: 768px) {
+    div[style*="position: absolute"] p {
+      font-size: 0.9rem;
+      max-width: 70px;
+    }
+    div[style*="position: absolute"] img {
+      width: 70px;
+    }
+    .hide-mobile {
     display: none;
   }
+    .project-box{
+    display: none;
 }
+  }
+
+  @media screen and (max-width: 480px) {
+    div[style*="position: absolute"] {
+      top: 50%;
+      left: 60%;
+    }
+    div[style*="position: absolute"] p {
+      font-size: 0.8rem;
+      max-width: 65px;
+    }
+    div[style*="position: absolute"] img {
+      width: 65px;
+    }
+    .hide-mobile {
+    display: none;
+  }
+    .project-box{
+    display: none;
+}
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    div[style*="position: absolute"] p {
+      font-size: 1rem;
+      max-width: 90px;
+    }
+    div[style*="position: absolute"] img {
+      width: 90px;
+    }
+    .hide-mobile {
+    display: none;
+  }
+    .project-box{
+    display: none;
+}
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1200px) {
+    div[style*="position: absolute"] p {
+      font-size: 1.1rem;
+      max-width: 100px;
+    }
+    div[style*="position: absolute"] img {
+      width: 100px;
+    }
+    .hide-mobile {
+    display: none;
+  }
+    .project-box{
+    display: none;
+}
+  }
+
+  @media screen and (min-width: 1201px) {
+    div[style*="position: absolute"] p {
+      font-size: 1.2rem;
+      max-width: 110px;
+    }
+    div[style*="position: absolute"] img {
+      width: 110px;
+    }
+  }
 
 
