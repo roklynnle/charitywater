@@ -30,7 +30,7 @@ header {
   color: #666;
 }
 
-nav a {
+nav a::highlight {
   margin-left: 20px;
   text-decoration: none;
   color: #222;
