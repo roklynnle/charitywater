@@ -140,11 +140,11 @@ p {
 }
 
 .search-bar {
-  width: 100%;
+  width: 80%;
 }
 
 .search-bar input {
-  width: 100%;
+  width: 80%;
   max-width: 400px;
   padding: 0.8rem;
   border-radius: 6px;
@@ -206,6 +206,9 @@ footer {
 }
 .hide-mobile {
   display: block;
+}
+.project-box{
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
