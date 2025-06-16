@@ -33,7 +33,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #2E9DF7;
+  background-color: #77ABBB;
   padding: 1rem 1.5rem;
   box-sizing: border-box;
 }
@@ -106,7 +106,7 @@ h1 {
   margin-right: auto;
   font-family: 'ProximaNova', sans-serif;
   font-size: 2rem;
-  color: #FFC907;
+  color: #FFF7E1;
 }
 
 p {
@@ -115,7 +115,7 @@ p {
   margin-right: auto;
   max-width: 600px;
   margin-bottom: 1.5rem;
-  color:#FF902A;
+  color:#FFF7E1;
   font-family: ProximaNova, sans-serif;
 }
 
@@ -156,11 +156,11 @@ footer {
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
-  color: #2E9DF7;
+  color: #77ABBB;
 }
 
 .project-box {
-  background-color: #fff;
+  background-color: #fff7E1;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
