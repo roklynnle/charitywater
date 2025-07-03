@@ -14,24 +14,50 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
+/* Container for nav links and donate button */
+.nav-donate {
+  display: flex;              /* Place nav and button side by side */
+  align-items: center;        /* Vertically center */
+  gap: 40px;                  /* Space between nav and donate button */
+}
+
+/* Make nav links bold and more clickable */
 header nav a {
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
   color: #333;
+  font-weight: bold;          /* Make links bold */
+  cursor: pointer;            /* Show pointer on hover */
+  transition: color 0.2s;     /* Smooth color change on hover */
+}
+
+/* Add a hover effect for nav links */
+header nav a:hover {
+  color: #FFC907;             /* Yellow color on hover */
 }
 
 header .donate-btn {
-  background-color: #fcd800;
+  background-color: #FFC907;
+  margin-right: 20px;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 8px; /* Rounded corners for consistency */
+  transition: background-color 0.2s, color 0.2s, transform 0.2s; /* Smooth effect */
+}
+
+/* Add a hover effect to the Donate button */
+header .donate-btn:hover {
+  background-color: #000000; /* Button background turns black on hover */
+  color: #FFC907;          /* Button text turns yellow on hover */
+  transform: scale(1.05);    /* Make the button a bit bigger */
 }
 
 .hero {
-  display: flex;
+  display: flex;         /* This puts .hero-text on the left and .hero-image on the right */
   flex-wrap: wrap;
-  background-color: #7aa2c0;
+  background-color: #7aa8bb;
   color: #111;
   padding: 40px 20px;
 }
@@ -43,21 +69,38 @@ header .donate-btn {
 
 .hero-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 20px;;
 }
 
 .hero-text p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 20px 
 }
 
+/* The buttons below can be tapped to donate. */
 .hero-text .buttons button {
   margin: 10px 5px 0 0;
   padding: 10px 20px;
   border: none;
-  background-color: #fcd800;
+  background-color: #FFC907;
   font-weight: bold;
-  cursor: pointer;
+  cursor: pointer; /* Shows pointer for clickable buttons */
 }
+
+.hero-text .buttons p {
+  margin: 0 0 10px 0; /* Add space below the message */
+  font-size: 1.1rem;  /* Make the message a bit larger */
+}
+
+/* Make the icons a little bigger and add space */
+.hero-text .buttons span[title] {
+  font-size: 1.3rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
 
 .hero-image {
   flex: 1;
@@ -65,45 +108,139 @@ header .donate-btn {
 }
 
 .hero-image img {
-  max-width: 100%;
+  max-width: 100%;    /* Image shrinks to fit its container on small screens */
+  width: 500px;       /* Default width for large screens */
   height: auto;
+  display: block;
+  margin-left: 92px;
+   /* Adds a yellow border around the image */
+  border-radius: 5px;       /* Optional: rounds the corners */
 }
 
-.story {
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.story h2 {
+/* Make the donate box fit small screens */
+.donate-box {
+  max-width: 100%;    /* Allow the box to shrink on small screens */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
+  background-color: #cbccd1; /* Light gray background */
+  display: flex;             /* Place items side by side */
+  align-items: center;       /* Vertically center items */
+  padding: 15px;
+  border-radius: 8px;        /* Rounded corners */
   margin-bottom: 20px;
+  margin-left: 20px;
+  max-width: 500px;          /* Keep it from getting too wide */
 }
 
-.story p {
-  line-height: 1.6;
+/* Text on the left side of the box */
+.donate-label {
+  margin-left: 10px;        /* Space between text and buttons */
+  min-width: 150px;
+  font-size: 1.2rem;
 }
 
-.cta {
-  background-color: #fcd800;
-  text-align: center;
-  padding: 40px 20px;
+/* Make "Quick and Secure" smaller and lighter */
+.donate-label .quick-secure {
+  font-size: 0.90rem;
+  margin-left: 5px;
+  color: #555;
+  font-style: proxima nova, sans-serif; 
 }
 
-.cta h2 {
-  margin-bottom: 20px;
-}
-
-.cta button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #000;
-  color: #fff;
+/* Make donation buttons bigger and more noticeable */
+.donate-buttons button {
+  margin-right: 10px;
+  padding: 16px 32px;           /* Bigger padding for larger buttons */
+  font-size: 1.1rem;            /* Larger text */
+  background-color: #FFC907;    /* Bright yellow background */
+  color: #111;                  /* Dark text for contrast */
   border: none;
+  border-radius: 6px;           /* Slightly rounded corners */
+  font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* Soft shadow for depth */
+  transition: transform 0.2s; /* Smooth effect */
+}
+
+/* Remove extra margin from last button */
+.donate-buttons button:last-child {
+  margin-right: 0;
+}
+
+.logo-area {
+  margin-left: 25px; /* Moves the logo 25px to the right */
+}
+
+/* Responsive adjustments for tablets and phones */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack text and image vertically */
+  }
+  .hero-image img {
+    width: 100%;           /* Image fills the container */
+    margin-left: 0;        /* Remove left margin on small screens */
+  }
+  .donate-box {
+    flex-direction: row; /* Stack label and buttons vertically */
+    align-items: flex-start;
+    padding: 10px;
+    margin-left: 0;
+  }
+  .donate-label {
+    margin-bottom: 10px;   /* Space below label */
+    margin-right: 0;
+  }
+}
+
+/* Remove extra margin from last button */
+.donate-buttons button:last-child {
+  margin-right: 0;
+}
+
+.logo-area {
+  margin-left: 25px; /* Moves the logo 25px to the right */
 }
 
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column; /* On small screens, stack the text and image vertically */
   }
+}
+
+.cta {
+  background-color: #cbccd1;
+  text-align: center;
+  padding: 40px 20px;
+}
+.cta button {
+  padding: 15px 25px;           /* Bigger button */
+  font-size: 1.1rem;            /* Larger text */
+  font-weight: bold;
+  background-color: #FFC907;    /* Yellow background */
+  color: #000000;
+  border: none;
+  border-radius: 8px;           /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* Soft shadow */
+  transition: background-color 0.2s, color 0.2s, transform 0.2s; /* Smooth effect */
+}
+
+/* Add a hover effect to make the Join Us button react */
+.cta button:hover {    
+  background-color: #000000;    /* Button background turns black on hover */
+  color: #FFC907;               /* Button text turns yellow on hover */
+  transform: scale(1.05);       /* Make the button a bit bigger */
+}
+
+/* Add a hover effect to make Apple Pay and PayPal buttons react */
+.donate-buttons button:hover {
+  background-color: #000000;    /* Button background turns black on hover */
+  color: #FFC907;               /* Button text turns yellow on hover */
+  transform: scale(1.05);       /* Make the button a bit bigger */
+}
+
+.story {
+  padding: 40px 40px;
+  background-color: #fff;
+  text-align: center; /* Center the heading and paragraph */
 }
