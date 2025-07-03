@@ -70,12 +70,12 @@ header .donate-btn:hover {
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  margin-left: 20px;;
+  margin-left: 20px;    /* Keep left margin for alignment */
 }
 
 .hero-text p {
   margin-bottom: 30px;
-  margin-left: 20px 
+  margin-left: 20px;    /* Keep left margin for alignment */
 }
 
 /* The buttons below can be tapped to donate. */
@@ -108,28 +108,27 @@ header .donate-btn:hover {
 }
 
 .hero-image img {
-  max-width: 100%;    /* Image shrinks to fit its container on small screens */
-  width: 500px;       /* Default width for large screens */
+  width: 500px;         /* Keep the image the same size */
+  max-width: 100%;      /* Prevent overflow on very small screens */
   height: auto;
   display: block;
-  margin-left: 92px;
-   /* Adds a yellow border around the image */
-  border-radius: 5px;       /* Optional: rounds the corners */
+  margin-left: 92px;    /* Keep image aligned with text and donate box */
+  border-radius: 5px;
 }
 
 /* Make the donate box fit small screens */
 .donate-box {
   max-width: 100%;    /* Allow the box to shrink on small screens */
   width: 100%;
-  box-sizing: border-box; /* Include padding in width */
-  background-color: #cbccd1; /* Light gray background */
-  display: flex;             /* Place items side by side */
-  align-items: center;       /* Vertically center items */
+  box-sizing: border-box;
+  background-color: #cbccd1;
+  display: flex;
+  align-items: center;
   padding: 15px;
-  border-radius: 8px;        /* Rounded corners */
+  border-radius: 8px;
   margin-bottom: 20px;
-  margin-left: 20px;
-  max-width: 500px;          /* Keep it from getting too wide */
+  margin-left: 20px;    /* Keep left margin for alignment */
+  max-width: 500px;
 }
 
 /* Text on the left side of the box */
@@ -175,35 +174,57 @@ header .donate-btn:hover {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column; /* Stack text and image vertically */
+    padding: 20px 5px;      /* Less padding on small screens */
   }
   .hero-image img {
     width: 100%;           /* Image fills the container */
-    margin-left: 0;        /* Remove left margin on small screens */
+    margin: 0 auto;        /* Center image */
   }
   .donate-box {
-    flex-direction: row; /* Stack label and buttons vertically */
-    align-items: flex-start;
+    flex-direction: column; /* Stack label and buttons vertically */
+    align-items: stretch;   /* Stretch to fit container */
     padding: 10px;
     margin-left: 0;
+    max-width: 100%;
   }
   .donate-label {
     margin-bottom: 10px;   /* Space below label */
     margin-right: 0;
+    margin-left: 0;
+    text-align: center;    /* Center label text */
+  }
+  .donate-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;              /* Space between buttons */
+    align-items: center;    /* Center buttons */
+  }
+  .donate-buttons button {
+    width: 90%;             /* Make buttons fill most of the width */
+    margin-right: 0;
+  }
+  .hero-text h1,
+  .hero-text p {
+    margin-left: 0;         /* Remove left margin for mobile */
+    text-align: center;     /* Center text for mobile */
+  }
+  .story {
+    padding: 30px 10px;     /* Less padding for mobile */
+  }
+  .cta {
+    padding: 30px 10px;     /* Less padding for mobile */
   }
 }
 
-/* Remove extra margin from last button */
-.donate-buttons button:last-child {
-  margin-right: 0;
-}
-
-.logo-area {
-  margin-left: 25px; /* Moves the logo 25px to the right */
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column; /* On small screens, stack the text and image vertically */
+@media (max-width: 520px) {
+  .hero-image img {
+    width: 100%;        /* Allow image to shrink on very small screens */
+    margin-left: 0;     /* Remove left margin for small screens */
+  }
+  .hero-text h1,
+  .hero-text p,
+  .donate-box {
+    margin-left: 0;     /* Remove left margin for small screens */
   }
 }
 
