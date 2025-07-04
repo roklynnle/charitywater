@@ -1,47 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>charity: water | Change Lives With $10</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <img src="img/cw_logo-2.png" alt="charity: water logo" class="logo">
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <button class="dropbtn">TAKE ACTION <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Donate</a>
+              <a href="#">Fundraise</a>
+              <a href="#">Volunteer</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <button class="dropbtn">ABOUT US <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Impact</a>
+              <a href="#">Team</a>
+            </div>
+          </li>
+          <li><a href="#" class="nav-link">WHY WATER?</a></li>
+          <li><a href="#" class="nav-link">Log in</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Change a Life With Just $10</h1>
+        <p class="subhead">Fast, transparent, and powerful—your donation goes straight to the field, giving clean water to those who need it most.</p>
+        <button class="cta-button" id="donateButton">Donate Today</button>
+      </div>
+      <div class="hero-image">
+        <img src="img/personsmile.png" alt="Person smiling with clean water">
+      </div>
+    </div>
+    <div class="impact-highlights">
+      <div class="highlight-item">
+        <i class="fas fa-check-circle"></i>
+        <span>100% of donations fund clean water</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-mobile-alt"></i>
+        <span>Mobile-friendly giving: Venmo, Apple Pay</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-globe-americas"></i>
+        <span>Real stories: Real impact</span>
+      </div>
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+  <!-- Impact Section -->
+  <section class="impact">
+    <div class="container">
+      <h2>Why Your $10 Matters</h2>
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-check-circle"></i></div>
+          <h3>100% to the field</h3>
+          <p>Every dollar goes directly to water projects</p>
         </div>
-    </section>
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile-friendly</h3>
+          <p>Venmo, Apple Pay, and other easy ways to give</p>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>Proven impact</h3>
+          <p>See exactly how your donation changes lives</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- Story Section -->
+  <section class="story">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-text">
+          <h2>Meet Amina</h2>
+          <p>Amina used to walk 4 hours daily to collect dirty water for her family in Ethiopia. Thanks to donors like you, her village now has a clean water well.</p>
+          <p>"Now I can go to school and my baby brother won't get sick," says Amina. "Clean water changed everything."</p>
+          <p><strong>Just $10</strong> can provide clean water for one person for a year.</p>
+        </div>
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b" alt="Amina smiling with clean water">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation CTA -->
+  <section id="donateSection" class="donate">
+    <div class="container">
+      <h2>Your $10 Makes a Difference</h2>
+      <p>Join thousands of students helping solve the water crisis</p>
+      
+      <div class="donate-options">
+        <button class="donate-option" data-amount="10">$10</button>
+        <button class="donate-option" data-amount="25">$25</button>
+        <button class="donate-option" data-amount="50">$50</button>
+        <button class="donate-option" data-amount="other">Other</button>
+      </div>
+      
+      <div class="payment-options" id="paymentOptions">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Venmo_Logo.svg" alt="Venmo" class="payment-option" data-method="venmo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/1200px-Apple_Pay_logo.svg.png" alt="Apple Pay" class="payment-option" data-method="applepay">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Credit Card" class="payment-option" data-method="creditcard">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 charity: water. All donations are tax deductible.</p>
+      <p>Designed by Nhi Nguyen</p>
+    </div>
+  </footer>
+
+  <!-- Donation Success Modal -->
+  <div class="modal" id="donationModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2>Thank You for Your Donation!</h2>
+      <p id="donationMessage">Your generous gift of $<span id="donationAmount">10</span> will help provide clean water to those in need.</p>
+      <p>We'll send you updates on how your donation is making an impact.</p>
+      <div class="celebration">🎉</div>
+      <button class="cta-button" id="closeModalButton">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
