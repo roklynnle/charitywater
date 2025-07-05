@@ -1,21 +1,23 @@
-/* charity: water Brand Colors & Fonts
+/* 
+  charity: water Brand Colors & Fonts
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+  Primary Colors:
+    - Yellow:     #FFC907
+    - Blue:       #2E9DF7
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+  Secondary Colors:
+    - Light Blue: #8BD1CB
+    - Green:      #4FCB53
+    - Orange:     #FF902A
+    - Red:        #F5402C
+    - Dark Green: #159A48
+    - Pink:       #F16061
 
-Fonts:
-- Proxima Nova
-- Avenir
+  Fonts:
+    - Proxima Nova
+    - Avenir
 
+  Set up the main font and background color for the whole page
 */
 
 /* 
@@ -31,7 +33,35 @@ body {
   padding: 0;
   color: #222;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 2px solid #000; /* <-- This is the black line */
+  background-color: #fff;
+}
+/* Add space between each navigation button */
+nav a.nav-btn {
+  display: inline-block;
+  background-color: #ffd700; /* Canva-style yellow */
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 140px;        /* Set a fixed width for all buttons */
+  text-align: center;  /* Center the text inside the button */
+  box-sizing: border-box; /* Make sure padding doesn't add to width */
+  margin-right: 12px;  /* Add space to the right of each button */
+}
 
+/* Remove the margin from the last button so it doesn't push against the edge */
+nav a.nav-btn:last-child {
+  margin-right: 0;
+}
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
   background: #fff; /* White background for sections */
@@ -72,7 +102,7 @@ main > section {
 
 /* Align the hero section text to the left for beginners */
 .hero {
-  text-align: left;    /* Align all text in the hero section to the left */
+  text-align: center;    /* Align all text in the hero section to the left */
   padding-left: 32px;  /* Add some space from the left edge */
   padding-right: 16px; /* Keep a little space on the right */
 }
@@ -164,11 +194,10 @@ h2 {
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
-/* Show the two images side by side on bigger screens */
 .images {
   display: flex;              /* Place image boxes in a row */
   justify-content: center;    /* Center the images horizontally */
-  gap: 30px;                  /* Space between the images */
+  gap: 300px;                  /* Space between the images */
   margin-top: 30px;           /* Space above the images */
 }
 
