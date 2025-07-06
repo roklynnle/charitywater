@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/cw_logo-2.png" alt="Charity Water Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#">Take Action</a>
+      <a href="#">About Us</a>
+      <a href="#">Why Water?</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Transparency You Can Trust. <br> Impact You Can See</h1>
+      <p class="subheadline">Track every dollar. See exactly how your donation changes lives</p>
+      <button class="donate-btn">Donate Today</button>
+      <!-- Donation Popup Form (hidden by default) -->
+      <div id="donate-popup" class="donate-popup" style="display:none;">
+        <form id="donate-form">
+          <h3>Donate</h3>
+          <label for="fullname">Full Name:</label><br>
+          <input type="text" id="fullname" name="fullname" required><br><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+          <button type="submit">Submit</button>
+          <button type="button" id="cancel-btn">Cancel</button>
+        </form>
+      </div>
+      <p class="support-text">Today, nearly 1 in 10 people around the world do not have access to the most basic necessity, clean water. Water changes everything, and we invite you to be the catalyst for that change.</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://cdn2.dropmarkusercontent.com/52043/971f45c07a1db2df43533f77e704c6238ac66e7670b22bd3395e0657817b9275/preview/4887_Ethiopia_2019_CG-.jpg?Expires=1751830995&Signature=HWyACBOtDewK2wQ3lZCsfYYO7WBk4QThECNwbZSV6GNuRp48JPAhSJ~Qo0aQbQ5XFMZUrjdzj6fILHl34~eGag2osHfPWIjvNnMt0~oM6J85ebxBvOwg6bpWqvNkyq5ZSxeM8bl16uOyb5uCAf7pqM4ROuwrFplWebrE2xm~mHdf-GlanH3tXrxKLlifIyEi9zMMFrY5JD33oK0yjNoVAs2nXXkMbgBNtF5I2NK9mqaI0JwCpEcqB1OjrEnmK5Eh2csk2hr6eyD235ka~G-dixzfRHPxZj3QsowWcMhcuPXIsCFBHhsI7Mghvwc5HRgMSA77DRfZdW6hqiKinYsUWA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Child using clean water">
+    </div>
+  </section>
+
+  <!-- Our Story Section: Now with image next to text -->
+  <section class="our-story">
+    <div class="our-story-content">
+      <div class="our-story-text">
+        <h2>Our Story</h2>
+        <p>
+          It started with a simple but powerful idea: clean water for every person on the planet. In 2006, Charity: Water was born out of a desire to solve the water crisis and restore hope to communities in need. Today, nearly 1 in 10 people around the world lack access to clean water—a basic human right. Through innovation, transparency, and the generosity of donors, we've funded life-changing water projects in over 29 countries. Every drop tells a story of health, education, and opportunity unlocked. And this is just the beginning.
+        </p>
+      </div>
+      <div class="our-story-image">
+        <!-- Story image for your story section -->
+        <img src="images/0207_Ethiopia_2019_CG-.jpg" alt="Our Story Image" />
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Show the donation popup when the Donate button is clicked
+    document.querySelector('.donate-btn').onclick = function(event) {
+      event.preventDefault();
+      document.getElementById('donate-popup').style.display = 'block';
+    };
+    // Hide the popup when Cancel is clicked
+    document.getElementById('cancel-btn').onclick = function() {
+      document.getElementById('donate-popup').style.display = 'none';
+    };
+    // Handle form submission
+    document.getElementById('donate-form').onsubmit = function(e) {
+      e.preventDefault();
+      // Get the button position
+      var btn = document.querySelector('.donate-btn');
+      var rect = btn.getBoundingClientRect();
+      // Calculate the center of the button relative to the viewport
+      var x = (rect.left + rect.right) / 2 / window.innerWidth;
+      var y = (rect.top + rect.bottom) / 2 / window.innerHeight;
+      // Confetti effect from the button position
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x: x, y: y }
+      });
+      alert('Thank you for your donation, ' + document.getElementById('fullname').value + '!');
+      document.getElementById('donate-popup').style.display = 'none';
+      document.getElementById('donate-form').reset();
+    };
+  </script>
+</body>
+</html>

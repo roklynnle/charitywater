@@ -1,0 +1,167 @@
+/* Font and Base Styling */
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  margin-left: 1.5rem;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Hero Section Layout */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #79A9B0; /* Canva-style blue */
+  padding: 4rem 2rem;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subheadline {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Donate Button */
+.donate-btn {
+  background-color: #FFC907;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+/* Support Paragraph */
+.support-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* Image Styling */
+.hero-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.hero-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Our Story Section */
+.our-story {
+  display: flex;
+  justify-content: flex-start; /* Align section to the left */
+}
+
+.our-story-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 160px; /* Space between text and image */
+  max-width: none; /* Remove max width so it stretches to the left */
+  margin: 0;
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.our-story-text {
+  flex: 1.0;
+  margin-left: 100px;
+}
+
+.our-story-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.our-story-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Optional: subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .our-story-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .our-story-image img {
+    max-width: 100%;
+  }
+}
