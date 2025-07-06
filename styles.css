@@ -26,7 +26,8 @@ Fonts:
 /* Set up the main font and background color for the whole page */
 body {
   background-color: #fffbe6; /* Very light yellow for a warm look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  /* Use Proxima Nova as the main font. If not available, use Arial or a generic sans-serif font. */
+  font-family: 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
