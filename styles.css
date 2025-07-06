@@ -25,7 +25,7 @@ body {
   max-width: 98vw;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(119, 168, 187, 0.15);
-  margin-left: 40px; /* Adds space on the left side */
+  margin-left: 50px; /* Adds space on the left side */
 }
 
 .container {
