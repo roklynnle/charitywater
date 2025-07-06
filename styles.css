@@ -12,6 +12,21 @@ body {
   color: #003366; /* Navy */
 }
 
+/* Make the hero section image larger and more welcoming */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF7E1;
+  padding: 40px 0 10px 0; /* Less space at the bottom */
+}
+.hero-section img {
+  width: 600px; /* Bigger image for more impact */
+  max-width: 98vw;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(119, 168, 187, 0.15);
+  margin-left: 40px; /* Adds space on the left side */
+}
 
 .container {
   display: flex;
@@ -30,6 +45,7 @@ body {
   object-fit: cover;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+  margin-left: 30px; /* Adds space on the left side of the image */
 }
 
 .content-section {
@@ -38,15 +54,39 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* This centers everything inside, including the button */
   background-color: #FFF7E1;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   box-shadow: 0 2px 16px rgba(0, 51, 102, 0.07);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Center and space out the content section for inspiration */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFF7E1;
+  padding: 30px 20px 50px 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 51, 102, 0.07);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Add space and center the story section */
+.story-section {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .logo {
-  width: 160px;
-  margin-bottom: 30px;
+  width: 320px; /* Increased from 240px to 320px */
+  margin-bottom: 80px; /* More space below the logo for clear separation */
+  margin-top: -30px; /* Moves the logo up by 30px */
+  align-self: flex-start; /* Align the logo to the left */
 }
 
 h1 {
@@ -58,30 +98,37 @@ h1 {
   letter-spacing: 1px;
 }
 
+/* Set the CTA button to be exactly 3 inches wide */
 .cta-button {
   background-color: #FFC907; /* Yellow */
   color: #003366; /* Navy */
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  padding: 15px 25px;
-  border-radius: 25px;
+  width: 3in; /* Button is exactly 3 inches wide */
+  padding: 15px 0; /* Padding on top and bottom, no extra on sides */
+  border-radius: 20px;
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   transition: background 0.3s ease;
   box-shadow: 0 2px 8px rgba(119, 168, 187, 0.10);
   font-family: 'Quicksand', Arial, sans-serif;
+  text-align: center; /* Center the text inside the button */
 }
 
 .cta-button:hover {
   background-color: #77A8BB; /* Blue */
   color: #FFF7E1; /* Cream */
+  border-radius: 25px;
 }
 
+/* Make the subtext fit and align like the heading (h1) */
 .subtext {
   font-size: 1rem;
   color: #77A8BB; /* Blue */
   line-height: 1.6;
-  max-width: 400px;
+  align-self: center; /* Center the subtext like the heading */
+  max-width: 600px; /* Optional: limit width for better readability */
   font-family: 'Quicksand', Arial, sans-serif;
+  text-align: center; /* Center the text */
 }
