@@ -1,3 +1,27 @@
+// Logo refresh and scroll to top
+const logo = document.querySelector('.logo');
+if (logo) {
+  logo.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  logo.style.cursor = 'pointer';
+}
+
+// Handle login click
+document.querySelector('a[href="#"].nav-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  alert('Login modal would appear here');
+  // Or implement actual login modal logic
+});
+
+// Handle Why Water click
+document.querySelector('a.nav-link[href="#"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  alert('Why Water information would display here');
+  // Or scroll to relevant section
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   // Scroll to donate section
   const donateButton = document.getElementById('donateButton');
@@ -111,4 +135,37 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
   }
+});
+
+// Handle dropdown menu clicks
+document.querySelectorAll('.dropdown-content a').forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    const action = this.textContent.trim();
+    
+    switch(action) {
+      case 'Donate':
+        document.getElementById('donateSection').scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'Fundraise':
+        alert('Fundraising page would load here');
+        // window.location.href = '/fundraise';
+        break;
+      case 'Volunteer':
+        alert('Volunteer page would load here');
+        // window.location.href = '/volunteer';
+        break;
+      case 'Our Story':
+        document.getElementById('storySection').scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 'Impact':
+        alert('Impact page would load here');
+        // window.location.href = '/impact';
+        break;
+      case 'Team':
+        alert('Team page would load here');
+        // window.location.href = '/team';
+        break;
+    }
+  });
 });
