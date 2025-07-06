@@ -1,119 +1,35 @@
-/* Global Styles */
-body {
-  margin: 0;
-  font-family: 'Proxima Nova', 'Avenir', Georgia, serif;
-  background-color: #fff8ed;
-  color: #1a2a3a;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Water Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Every Drop<br>Every Dollar Matters</h1>
+      <p>100% of your donation goes to real projects you can track. Just $10 can change a life today.</p>
+      <a href="#" class="cta-button">Track Your Impact. Give Now.</a>
+    </header>
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
+    <div class="images-grid">
+      <img src="https://via.placeholder.com/400x250?text=Clean+Water+1" alt="Water image 1">
+      <img src="https://via.placeholder.com/400x250?text=Clean+Water+2" alt="Water image 2">
+      <img src="https://via.placeholder.com/400x250?text=Clean+Water+3" alt="Water image 3">
+    </div>
 
-/* Header */
-header {
-  text-align: left;
-  padding-bottom: 20px;
-}
+    <div class="donation-options">
+      <img src="https://via.placeholder.com/40?text=V" alt="Venmo">
+      <img src="https://via.placeholder.com/40?text=Z" alt="Zelle">
+      <img src="https://via.placeholder.com/40?text=" alt="Apple Pay">
+    </div>
 
-h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  line-height: 1.3;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-top: 10px;
-  max-width: 600px;
-}
-
-/* CTA Button */
-.cta-button {
-  display: inline-block;
-  background-color: #ffd43b;
-  color: #1a2a3a;
-  padding: 14px 22px;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #ffcc00;
-  transform: scale(1.05);
-}
-
-/* Images Grid */
-.images-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.images-grid img {
-  width: 100%;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.images-grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Donation Options */
-.donation-options {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.donation-options img {
-  width: 40px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.donation-options img:hover {
-  transform: rotate(-5deg) scale(1.1);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 50px;
-  padding-top: 20px;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-.logo {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #1a2a3a;
-  margin-bottom: 5px;
-}
-
-/* Responsive Typography */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .cta-button {
-    font-size: 0.95rem;
-    padding: 12px 18px;
-  }
-}
-
+    <footer>
+      <div class="logo">charity: water</div>
+      <div>Charity: Water in Tanzania</div>
+    </footer>
+  </div>
+</body>
+</html>
