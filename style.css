@@ -7,76 +7,94 @@ body {
   color: #1a1a1a;
 }
 
-/* Logo */
+/* Header */
 header {
-  /* Add 50px padding above and below the logo for some space */
-  padding: 50px 0; /* 50px top and bottom, 0 left and right */
+  padding: 50px 0;
   margin: 0;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.logo {
+  position: relative;
+  z-index: 3;
 }
 
 .logo img {
-  /* No margin or padding so only the logo image is visible */
-  max-height: 50px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
+  max-height: 50px;
+  width: auto;
   margin: 0;
   padding: 0;
-  display: block; /* Removes extra space below image */
+  display: block;
 }
 
 /* Hero Section */
 .hero {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 5%;
+  padding: 0px 5%;
   background-color: #ffffff;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
+/* Collage image */
 .image-grid {
-  /* Remove grid for beginners and make the collage image take up half the page width */
-  display: block; /* No grid for simplicity */
-  width: 50%;     /* Collage image container is half the page */
-  margin-right: 40px; /* Space to the right */
-  /* You can adjust margin as needed */
+  width: 50%;
+  margin-right: 40px;
+  z-index: 2;
+  position: relative;
 }
 
 .image-grid img {
-  /* Make the collage image fill its container and keep its shape */
   width: 100%;
   height: auto;
   display: block;
   border-radius: 6px;
 }
 
-/* Text Section */
+/* Text Block (with independent control) */
 .hero-text {
-  flex: 1 1 40%;
-  max-width: 500px;
-  padding: 20px;
-  background-color: #fed8c1; /* soft peach tone */
-  border-radius: 10px;
-  /* Center all content inside hero-text */
-  text-align: center;
+  width: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+/* Heading Text */
 .hero-text h1 {
-  /* Center the heading text */
-  text-align: center;
-  font-size: 2.2rem;
+  position: relative;
+  font-size: 3rem;
   font-weight: 600;
-  line-height: 1.3;
-  color: #1a1a1a;
+  line-height: 1.6;
   margin-bottom: 20px;
+  text-align: left;
+
+  /* 👇 MOVE THIS INDIVIDUALLY 👇 */
+  top: -60px;
+  left: 0px;
 }
 
+/* CTA Button */
 .cta-button {
-  display: inline-block;
-  background-color: #ffc907; /* charity: water yellow */
+  position: relative;
+  background-color: #ffc907;
   color: #1a1a1a;
   text-decoration: none;
   font-weight: 600;
@@ -84,16 +102,61 @@ header {
   border-radius: 5px;
   transition: all 0.3s ease;
   margin-bottom: 20px;
+
+  /* 👇 MOVE THIS INDIVIDUALLY 👇 */
+  top: 110px;
+  left: 0px;
 }
 
 .cta-button:hover {
-  background-color: #bf6c46; /* rich clay hover */
+  background-color: #bf6c46;
   color: #ffffff;
 }
 
+/* Subtext */
 .subtext {
-  font-size: 1rem;
-  color: #1a1a1a;
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;     /* Centers the text content */
+  align-self: center;     /* Centers the box inside the column */
+  
+  /* You can still move it individually */
+  top: 120px;
+  left: 25px;
+}
+
+
+/* Circles — UNCHANGED */
+.hero-text-bg-circles {
+  position: absolute;
+  top: -160px;
+  left: 75%;
+  width: 1200px;
+  height: 700px;
+  transform: translateX(-50%) rotate(10deg);
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-text-bg-circles .circle1 {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: rgba(254, 216, 193, 0.5);
+  border-radius: 50%;
+}
+
+.hero-text-bg-circles .circle2 {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 600px;
+  height: 600px;
+  background: rgba(191, 108, 70, 0.5);
+  border-radius: 50%;
 }
 
 /* Responsive Design */
@@ -103,14 +166,22 @@ header {
     padding: 20px;
   }
 
-  .image-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding-right: 0;
-    margin-bottom: 20px;
+  .image-grid,
+  .hero-text {
+    width: 100%;
+    margin-right: 0;
   }
 
   .hero-text {
-    width: 100%;
+    align-items: center;
+  }
+
+  .hero-text h1,
+  .subtext {
+    text-align: center;
+  }
+
+  .cta-button {
+    align-self: center;
   }
 }
