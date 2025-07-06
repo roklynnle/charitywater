@@ -288,16 +288,9 @@
       <img src="img/cw_logo-2.png" alt="Charity Water Logo">
     </span>
     <div class="header-actions">
-      <!-- Add onclick to show the welcome box -->
-      <a href="#" class="header-btn" onclick="showWelcomeBox(); return false;">Sign In</a>
+      <!-- Remove onclick and welcome box -->
+      <a href="#" class="header-btn">Sign In</a>
       <a href="#" class="header-btn">Learn More</a>
-    </div>
-  </div>
-  <!-- Welcome Back box, hidden by default -->
-  <div id="welcome-box" onclick="hideWelcomeBox()">
-    <div id="welcome-box-content" onclick="event.stopPropagation();">
-      <button id="welcome-close" onclick="hideWelcomeBox();" aria-label="Close">&times;</button>
-      Welcome Back!
     </div>
   </div>
   <div class="container">
