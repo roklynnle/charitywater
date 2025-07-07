@@ -41,7 +41,7 @@ body {
   text-decoration: none;
   box-shadow: 0 0 12px 4px rgba(255, 167, 51, 0.7);
   animation: wobble 0.8s ease-in-out infinite;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .cta-button:hover {
