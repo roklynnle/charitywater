@@ -20,179 +20,157 @@ Fonts:
 
 /* 
   Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
+  This CSS is simple and beginner-friendly.
+  It creates a diagonal background with two colors.
 */
 
-/* Set up the main font and background color for the whole page */
-body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+/* General Reset for consistency */
+* {
   margin: 0;
   padding: 0;
-  color: #222;
+  box-sizing: border-box;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+/* Set the main font and diagonal background for the whole page */
+body {
+  font-family: Arial, sans-serif; /* Use a simple font */
+  line-height: 1.6;              /* Make text easier to read */
+  /* Diagonal cut: top-left is #d9d9d9, bottom-right is #1b3061 */
+  background: linear-gradient(135deg, #d9d9d9 0%, #d9d9d9 50%, #1b3061 50%, #1b3061 100%);
+  color: #333;                   /* Main text color */
+  min-height: 100vh;             /* Make sure background covers the whole page */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+/* Make the content take all available space except the footer */
+.content-wrapper {
+  flex: 1;
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-}
-
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
-
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
+/* Header section styles */
+header.hero {
+  background-color: transparent; /* Let the body background show through */
+  padding: 2rem;
   text-align: center;
-  padding: 30px 20px;
 }
 
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
+/* Main title style */
+header.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111; /* Dark color for contrast */
 }
 
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
+/* Intro and mission paragraphs */
+.intro,
+.mission {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+
+/* Branding/logo section styles */
+.branding-section {
+  background-color: #1b3061; /* Deep blue for the rest */
+  color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 2rem;
 }
 
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+/* Logo image style */
+.logo {
+  max-width: 150px;
+  margin: 1rem auto;
+  display: block;
 }
 
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
+/* Image gallery styles */
+.image-gallery {
+  display: flex;              /* Use flex for simple layout */
+  flex-wrap: wrap;            /* Wrap images to next line if needed */
+  gap: 1rem;                  /* Space between images */
+  justify-content: center;    /* Center the images */
+  margin: 2rem 0;
+}
+
+/* Each image in the gallery */
+.image-gallery img {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Call-to-action box styles */
+.cta-box {
+  margin-top: 2rem;
+}
+
+/* Call-to-action heading */
+.cta-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Donate button styles */
+.donate-btn {
+  background-color: #FFC907;  /* Bright yellow */
+  color: #111;                /* Dark text */
+  padding: 0.8rem 1.5rem;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 5px;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
+  display: inline-block;
+  margin-top: 10px;
   border: none;
   cursor: pointer;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+/* Donate button hover effect */
+.donate-btn:hover {
+  background-color: #ffcd3c;
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
+/* Footer styles */
+footer.footer {
+  background-color: #1b3061;  /* Deep blue for the rest */
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
+/* Each column in the footer */
+.footer .column {
+  margin: 1rem;
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+/* Footer headings */
+.footer h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
 
-  .impact-image {
-    width: 300px;
-  }
+/* Remove bullets and padding from lists */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Add space between list items */
+.footer ul li {
+  margin: 0.5rem 0;
+}
+
+/* Footer links */
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer link hover effect */
+.footer ul li a:hover {
+  text-decoration: underline;
 }
