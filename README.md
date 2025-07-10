@@ -15,21 +15,25 @@
       background-color: #000000;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      padding: 1rem 2rem;
+      align-items: center;
+      padding: -1.5rem 2rem 2rem 2rem;
       color: white;
       flex-wrap: wrap;
       position: relative;
       z-index: 1;
     }
 
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
     nav {
       display: flex;
       gap: 1.5rem;
       align-items: center;
-      margin-left: auto;
-      margin-right: 1rem;
-      margin-top: 3.7rem;
+      margin-top: 8rem;
     }
 
     nav a {
@@ -58,35 +62,37 @@
       background-color: #77a8bb;
       color: #003366;
       padding: 0.75rem 1.5rem;
+      position: relative; right: -1200px;
+      top: -100px;
+      justify-content: space-between;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-left: auto;
-      cursor: pointer;
       font-size: 1rem;
       transition: all 0.3s ease;
       border: none;
       outline: none;
       display: inline-block;
+      margin-top: 0;
     }
 
     .donate-btn:hover {
       outline: 2px solid white;
       animation: bounceUp 0.5s ease;
-      position: relative;
+      position: space-between;
       z-index: 2;
     }
 
     .hero {
-      margin-top: 0;
       background-color: #003366;
       color: white;
       padding: 3rem 2rem 2rem 2rem;
+      top: -60px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      margin: -1.55rem 2rem 2rem 2rem;
+      margin: 0.5rem 1rem 2rem 1rem;
       border-radius: 20px;
       position: relative;
       z-index: 1;
@@ -155,157 +161,59 @@
     }
 
     .hero-images img {
-      width: 45%;
-      border-radius: 10px;
       object-fit: cover;
+      border-radius: 12px;
     }
 
-    .hero-images img:first-child {
+    .hero-images img:nth-child(1) {
       width: 100%;
       max-height: 300px;
-      border-radius: 15px;
-      object-fit: cover;
-      margin-bottom: 1rem;
+      opacity: 0.9;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
-
-    @media (max-width: 800px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text, .hero-images {
-        max-width: 100%;
-      }
-
-      .hero-images {
-        margin-top: 2rem;
-      }
-
-      .hero-images img {
-        width: 40%;
-      }
-
-      .hero-images img:first-child {
-        width: 100%;
-      }
-    }
-
-    @keyframes confetti {
-      0% { transform: translateY(-100px); opacity: 1; }
-      100% { transform: translateY(500px); opacity: 0; }
-    }
-
-    .confetti {
-      pointer-events: none;
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background-color: #fff;
-      animation: confetti 3s ease-out forwards;
-      z-index: 9999;
+    .hero-images img:nth-child(2) {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
+      object-position: center top;
+    }
+    .hero-images img:nth-child(3) {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-position: center top;
+    }
+    .hero-images img:nth-child(4) {
+      width: 45%;
+      height: auto;
     }
 
-    /* Overlay for background blur & darken */
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.4);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      z-index: 9998;
-      display: none;
-    }
-
-    #thank-you {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-weight: bold;
-      font-size: 3rem;
-      text-align: center;
-      z-index: 9999;
-      pointer-events: none;
-      padding: 1rem 2rem;
-      border-radius: 15px;
-      background: rgba(0, 51, 102, 0.8);
-      box-shadow: 0 0 20px white;
-      max-width: 90%;
-    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="left-header">
+      <img src="https://i.postimg.cc/NMhk08fw/charitywater-logo-horizontal-White-Text.png" alt="Charity: Water Logo" style="height: 40px;">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">What do we do?</a>
+      </nav>
+    </div>
+    <button type="button" class="donate-btn" style="margin-right: auto; margin-left: auto; margin-top: 0.5rem;">Donate Here →</button>
+  </header>
 
-<header>
-  <img src="https://i.postimg.cc/NMhk08fw/charitywater-logo-horizontal-White-Text.png" alt="Charity: Water Logo" style="height: 40px;">
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About us</a>
-    <a href="#">What do we do?</a>
-  </nav>
-  <button type="button" class="donate-btn">Donate Here →</button>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <div class="hashtag">#jointhemovement</div>
-    <h1>Change Starts with Us,<br>Clean Water for all</h1>
-    <p>
-      Advocate and use your voice to make a difference in the lives of others, 
-      join now to help give water for those in need. Learn how you can be a 
-      part of this organization today.
-    </p>
-    <button class="learn-more-btn">Learn More →</button>
-  </div>
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hashtag">#jointhemovement</div>
+      <h1>Change Starts with Us,<br>Clean Water for all</h1>
+      <p>Advocate and use your voice to make a difference in the lives of others, join now to help give water for those in need. Learn how you can be a part of this organization today.</p>
+      <button class="learn-more-btn">Learn More →</button>
+    </div>
   <div class="hero-images">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/1b90606fe869585aa4a73fef2d582743544c85398f725fd9457aacb60006aa32/0207_Ethiopia_2019_CG-.jpg?Expires=1751787577&Signature=B22r35mXQYmTLJitqs~qw1g0QO7Fyu0QdYcScFfSSd90MDdmc9eUCpU4owHHkwYTwH1zabwkFgNoI25CV7r8rzV0ugccLGCV2U9lk6vvZ0kX0toSPkcIzkv5aiJYo2xrWJx3LOdThfiFqunq7WrVr7NEKF5GOAcDGXh8zsSaUK2afSRCuTEzBH2Na9ZhodmjIqo3hEPg3DTB01ROvjG-VmywlReufIzB-qUnQdxDVoYDHFrRw-kXmOjCr-A-I3AUhNUal5Jvc52J3UJS9aEaknc0wEgT4FH0EXCUh5d9rlKDdrJ3Tr-mk4gUDu5NzTgb~UwqcvSPHukSQ-zx83iwoQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 1">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/40ba41fc45e5e377672c3ed45d1f0b554df90beb280d7c7278bb8013ce08bee4/4800_Ethiopia_2019_CG-.jpg?Expires=1751787739&Signature=IDfQDTOGnriET6MmoCbUgICb~K02YbRUBGcwWJbenr9HarnFubN46B9Svg3yiUFOVvGl23-g4SKjRsn03jvLemSv5qk8CgT52bSvCfAyUrC40yl8BRqvV6HmOLBEt3DHCmS0GeFXL5YgyYulMFZPjIihXMMIwFOs7MeOPfjzRUSUl7-MyI6FAWq0Fgpc2qDExfDxOF~iTGJLesxfSLd-7fVmRQqn63MBiR9m4MvmL4lzZiH5jXdPDSal1BwfL4VYXc3Odr4mOpIls0J6MRUDtSWOQexe0ttT-5jpTy9sfiBQoo5FAq4TUokVnEXntSlAftM5lJG41t8QbD6jgZzH~w__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 2">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/a0ee6da6d6c0b14400f8c80618aebb6265ff6908bd0562e881adcb5420af230e/charity_water_Tanzania_TaraShupePhotography_0074.jpg?Expires=1751787855&Signature=F-2QCOQgq65tLrPHq~4FjPyZ45i5DovpoTxek6UGJd74s2BsJxARy6LGF0PJJtLYbCHLkpC3S9AuZiNTV5z75LYMG3PNVL3-SjgAqIB14YM577iMxkX8GLZrYRm7GUy415eUJ2cDVD1nK3qbW6wTzBmRA4ewdRmBkCKkHie6BtjPrUE4vhwciyqV0JeZFE-EW-dDC6mSj-7bhAWg7WDuydQtIS5G0-q7WWUKBazbwUejgEIjYWqFdZQSBdD2-3x2AuI08uWoAUp89XY4StkCHoDU~ivTc5e6Z1Gux-Xy4psppT2pgzN-r5~F9u6sz1oeWoHS~As7l9c~Dyj0JHSS8g__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 3">
-    <img src="https://cdn2.dropmarkusercontent.com/52043/3554db57df40eeeb07505e24f5ab8ffbbc44ff9ff4129559b4c08fe789785ffd/9927_Ethiopia_2019_CG-.jpg?Expires=1751787794&Signature=ZNi3ifcbTs0ftPnfKuBRGT3J4DtvA2Eg9gVEnUhQI~4JtrMMeGq1gAR~rAtofTu6K6MQxCPt4MsvZxh~xz-AU27m6jydoXCrqZCuzf7Vh-FHaV8mupi5t-SkpMi4VE3epe5pL6xcoj5Jt2ehUdey7qmA-AFsJ8-nCZSvumfZUlMjSk8agm1-EP-VgBnqYjtalZujHxbnT6A3lS6mVOaJBPOFt0yNJibCcDH-xVQkzP6Jx8e4ssqPmcTPYiUEX~-3OVrC705yf6Gz51VtYFPQZCSpdsBBtVR99FQNDhxQMDzJzaZ2WB6R4wVUA0knMGaZZ12ptutAwRZfet203r9C0A__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 4">
+    <img src="https://cdn2.dropmarkusercontent.com/52043/000aea4976304b7ccd077f6e1400e0173f7def9e08c73387d1d9807beb5eb3ba/charity_water_Tanzania_TaraShupePhotography_0071.jpg?Expires=1752122506&Signature=bEr3eXCM~P7AMzAZVbnSgeuivf1bNSG7ducQ8x5kgBVIeIME-YvVm8~gMt4zgQwrP2ZX4EobTAlNOi3mcDfHRVZw1zebfMYwBSb6KDLZXIF~Eo805sZYS9PrvzOqZ2PG5zGt431yOv-0kJcwAdYTIye2iISd7IsyscpONY3NEcWy4qw~NzXMMrkU4ev5UC0pZGqYsofoY08UkSK31A40mAUMEv1-TctS5kxDRw1lpb154f6hGKDD89M2ZuaH4D77ZB80yRzeZ57VusnZ66QtkBA2BziCvgqCtU2OMLmmUJWASh~A2tbyo95UisqglQRPMuAK5sUimBu72HbEByWEtg__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Water Image 1">
   </div>
-</section>
-
-<div id="overlay"></div>
-<div id="thank-you">Thank you for your support!</div>
-
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const donateBtn = document.querySelector('.donate-btn');
-    const overlay = document.getElementById('overlay');
-    const thankYou = document.getElementById('thank-you');
-    const body = document.body;
-
-    donateBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      overlay.style.display = 'block';
-      thankYou.style.display = 'block';
-
-      for (let i = 0; i < 80; i++) {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
-        confetti.style.left = Math.random() * window.innerWidth + 'px';
-        confetti.style.top = (Math.random() * -150) + 'px';
-        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
-        const size = Math.random() * 8 + 4;
-        confetti.style.width = confetti.style.height = size + 'px';
-        body.appendChild(confetti);
-        setTimeout(() => confetti.remove(), 4000);
-      }
-
-      setTimeout(() => {
-        overlay.style.display = 'none';
-        thankYou.style.display = 'none';
-      }, 5000);
-    });
-  });
-</script>
+  </section>
 </body>
 </html>
