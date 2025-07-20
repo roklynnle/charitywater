@@ -1,0 +1,71 @@
+/* reset margin/padding */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  /* full-screen background */
+  background: url('background.jpg') no-repeat center center/cover;
+  position: relative;
+  color: #111;
+}
+
+/* Logo top-left */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 120px;
+}
+
+/* Main headline bottom-left */
+.headline {
+  position: absolute;
+  bottom: 150px;
+  left: 40px;
+  color: #111;
+}
+.headline h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+.headline p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  list-style: disc inside;
+}
+
+/* White text box top-right */
+.message-box {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  padding: 30px;
+  max-width: 300px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* CTA buttons bottom-right */
+.ctas {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+.ctas a {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  margin-left: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+}
