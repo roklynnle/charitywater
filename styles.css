@@ -37,6 +37,10 @@ body {
 
 /* Hero Section */
 .hero {
+  background-image: url('/CR-02-charity-water-lp/img/girl-drinking.jpeg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: top center;
   position: relative;
   height: calc(100vh - 68px);
   display: flex;
