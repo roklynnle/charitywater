@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url('/img/girl-drinking.jpeg');
+  background-image: url('/CR-02-charity-water-lp/img/girl-drinking.jpeg');
   background-repeat:no-repeat;
   background-size: cover;
   background-position: top center;
@@ -39,8 +39,6 @@ body {
 .hero {
   position: relative;
   height: calc(100vh - 68px);
-  background: url("https://via.placeholder.com/1200x800.png?text=Hero+Image") 
-              no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;
