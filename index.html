@@ -1,47 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Donation – 100% Impact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="jerry_can_yellow.png" alt="Your Logo" class="logo-img" />
+        <span>charity : water</span>
+      </a>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+      <nav>
+        <a href="#impact">Impact</a>
+        <a href="#how">How it works</a>
+        <a class="btn" href="#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">water • justice • transparency</span>
+        <h1>Your Donation, 100% Impact. Guaranteed.</h1>
+        <p class="sub">We turn your coffee money into clean water projects and send you proof of the change you made. See exactly how you're advancing the fight for water justice.</p>
+        <div class="cta-row">
+          <a class="btn" href="#donate">Give Monthly</a>
+          <a class="btn secondary" href="#impact">See the Proof</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+      <aside class="card" aria-label="Project proof card">
+        <h3>Project Update • Kajiado County</h3>
+        <p class="sub card-sub">Well rehabilitation underway. Estimated completion in 17 days.</p>
+        <div class="meter" role="meter" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+        <ul>
+          <li>62% funded • 124 donors</li>
+          <li>Target: $14,000 • Reached: $8,680</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="impact" class="impact-section">
+    <div class="container">
+      <h2>Real impact you can see</h2>
+      <p>GPS coordinates, photos, and reports for every project—delivered to your inbox so you always know the difference your gift makes.</p>
+    </div>
+  </section>
+
+  <section id="how" class="how-section">
+    <div class="container">
+      <h2>How it works</h2>
+      <ol>
+        <li><b>Donate</b> one-time or monthly.</li>
+        <li><b>We deploy</b> funds with vetted local partners.</li>
+        <li><b>You get proof</b> with photos, GPS, and outcomes.</li>
+      </ol>
+    </div>
+  </section>
+
+<section id="story" class="story-section">
+<div class="container story-grid">
+<div class="story-media">
+<img src="story.jpg" alt="Amina drawing clean water from a new well in Kajiado County" />
+</div>
+
+
+<div class="story-copy">
+<span class="eyebrow">field story</span>
+<h2>Amina’s village now has clean, safe water</h2>
+<p>
+Before this project, families walked hours to fetch unsafe water. Today, a
+rehabilitated well less than a kilometer away provides clean, reliable access—and
+time back for school, work, and rest.
+</p>
+<ul class="story-stats">
+<li><strong>4 hours</strong> saved per family each day</li>
+<li><strong>320+</strong> people served</li>
+<li><strong>0.5 km</strong> average distance to water</li>
+</ul>
+<div class="cta-row">
+<a class="btn" href="#donate">Donate Now</a>
+<a class="btn secondary" href="#impact">See more impact</a>
+</div>
+</div>
+</div>
+</section>
+
+  <section id="donate" class="donate-section">
+    <div class="container">
+      <h2>Join the movement</h2>
+      <div class="plan-grid">
+        <div class="plan">
+          <h3>$10 / mo</h3>
+          <p>Keep wells flowing with parts & training.</p>
+          <a class="btn" href="#">Start with $10</a>
+        </div>
+        <div class="plan featured">
+          <h3>$30 / mo</h3>
+          <p>Help fund new projects every quarter.</p>
+          <a class="btn" href="#">Start with $30</a>
+        </div>
+        <div class="plan">
+          <h3>Custom</h3>
+          <p>Pick any amount that feels right.</p>
+          <a class="btn" href="#">Choose Amount</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <a class="brand" href="#">
+        <img src="jerry_can_yellow.png" alt="Your Logo" class="logo-img" />
+        <span>charity : water</span>
+      </a>
+      <small>100% of public donations fund clean-water projects. You’ll always get proof.</small>
+    </div>
+  </footer>
 </body>
 </html>
+
+<link rel="stylesheet" href="./styles.css">
